@@ -1,6 +1,6 @@
 # Development Roadmap
 
-## Stage 0 — Pre-production & foundation [CURRENT]
+## Stage 0 — Pre-production & foundation [ACCEPTED]
 Deliverables:
 - persistent agent rules;
 - GDD, architecture, art direction and economy principles;
@@ -10,14 +10,14 @@ Deliverables:
 - minimal CI/build verification where practical;
 - performance/test strategy.
 
-Exit gate: clean project builds and launches; architecture reviewed by owner.
+Exit gate passed after physical Samsung SM-S938B testing.
 
-## Stage 1 — Tactile search vertical prototype
-One tray/scene, clutter, one hidden needle, touch manipulation, discovery feedback, reward and restart. Placeholder art is acceptable.
+## Stage 1 — Tactile search vertical prototype [CURRENT]
+One tray/scene, clutter, one hidden needle, touch manipulation, exposure-gated discovery, satisfying feedback, prototype score and restart. Placeholder art is acceptable but should already feel coherent.
 
-Exit gate: searching and finding is enjoyable enough to justify the rest of the game.
+Exit gate: at least 10 human-playtested rounds on the physical phone, no impossible rounds, controllable touch physics, no blind tap-through discovery, stable performance, and owner judgment that the core search loop is worth continuing.
 
-## Stage 2 — First automation line
+## Stage 2 — First automation line [LOCKED]
 Introduce a small set such as magnet, vibration table, conveyor, separator and packer. Validate visible cause/effect.
 
 ## Stage 3 — Economy & progression
