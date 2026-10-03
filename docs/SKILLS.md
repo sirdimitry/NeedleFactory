@@ -42,6 +42,57 @@ Do **not** automatically apply Compose/MVI/navigation/DI skills to the game core
 
 Do not activate narrative/backend/payment skills merely because they exist. NeedleFactory is currently offline-first and deliberately light on narrative.
 
+## Stage 2 — mandatory visual craft profile
+
+For Stage 2 automation work, the coding agent must actively apply the following disciplines in addition to game engineering:
+
+### Technical artist / 2.5D environment artist
+Responsibilities:
+- coherent machine silhouettes and proportions;
+- believable mechanical joints and material handoffs;
+- consistent perspective/depth cues;
+- contact shadows, layering and visual separation;
+- procedural shapes that look authored rather than accidental;
+- performance-aware visual construction suitable for mobile.
+
+### Industrial product / motion designer
+Responsibilities:
+- machinery that visually communicates function;
+- conveyors with belts, rollers, frames, supports and transfer points;
+- clear moving parts and motion language;
+- readable cause/effect without relying on labels.
+
+### Game UI/UX designer
+Use the existing `game-ui-design` reference skill plus general UI/UX principles.
+Responsibilities:
+- deliberate HUD hierarchy;
+- compact touch controls;
+- responsive portrait/landscape composition;
+- readable spacing/alignment;
+- debug information visually subordinate to gameplay;
+- accessible state indication beyond color alone.
+
+### Visual review rule
+A feature is not ready for owner review merely because it is functional.
+Before review, the agent must do a separate visual pass and reject obvious:
+- floating rectangles;
+- disconnected conveyors/chutes;
+- clipping/overlap artifacts;
+- inconsistent machine scale;
+- placeholder-looking HUD composition;
+- excessive unused space;
+- programmer-art geometry that obscures the intended industrial-diorama direction.
+
+When relevant external skills are available, prefer skills covering:
+- game UI design;
+- visual design / frontend-design principles;
+- technical art;
+- 2D/2.5D game art;
+- industrial/mechanical shape language;
+- motion design.
+
+Do not add a runtime framework merely to improve appearance. The skill upgrade is primarily a **design/review discipline**, not a dependency.
+
 ## Skill-selection rule
 
 For every substantial task:
