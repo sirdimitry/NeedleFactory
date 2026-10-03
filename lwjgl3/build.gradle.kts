@@ -1,0 +1,40 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+plugins {
+    alias(libs.plugins.kotlin.jvm)
+    application
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+kotlin { compilerOptions.jvmTarget.set(JvmTarget.JVM_11) }
+
+dependencies {
+    implementation(project(":core"))
+    implementation(libs.gdx.lwjgl3)
+    runtimeOnly("com.badlogicgames.gdx:gdx-platform:${libs.versions.gdx.get()}:natives-desktop")
+}
+
+application { mainClass.set("com.needlefactory.lwjgl3.DesktopLauncher") }
+
+tasks.named<JavaExec>("run") {
+    workingDir = rootProject.file("assets")
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) {
+        jvmArgs("-XstartOnFirstThread")
+    }
+    // Release-style diagnostics check: ./gradlew :lwjgl3:run -Pdiagnostics=false
+    systemProperty("needlefactory.diagnostics", providers.gradleProperty("diagnostics").getOrElse("true"))
+}
+
+// Optional real OpenGL verification. Not part of headless JVM tests or CI.
+tasks.register<JavaExec>("diagnosticSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.DiagnosticSmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) {
+        jvmArgs("-XstartOnFirstThread")
+    }
+}

@@ -1,5 +1,6 @@
 # Gradle
 .gradle/
+.kotlin/
 build/
 **/build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -31,6 +32,7 @@ Thumbs.db
 # Logs / captures
 *.log
 captures/
+verification/
 
 # Temporary
 *.tmp

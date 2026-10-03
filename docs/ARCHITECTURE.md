@@ -8,6 +8,20 @@ Kotlin + libGDX, KTX selectively, Box2D selectively, Gradle, Android Studio.
 
 Stage 0 must verify current stable versions, Android toolchain compatibility and licenses before pinning dependencies.
 
+## Implemented Stage 0 foundation
+
+Physical modules: `core` (Kotlin/JVM library), `android` (Android application),
+`lwjgl3` (desktop application). Both launchers depend on `core`; `core` has no
+platform-backend imports. Android owns SDK/lifecycle/insets integration and
+supplies immutable `BuildInfo`. `game/NeedleFactoryGame` owns a single
+`presentation/DiagnosticScreen`; its `debug/BootStatus` is pure Kotlin event
+state, tested without libGDX initialization. There is no gameplay state yet.
+
+Remaining logical packages are reserved by `package.md` files, not speculative
+classes or empty Gradle modules. Shared prototype assets live in `assets/`.
+No fixed-step simulation, physics, economy or save implementation is introduced.
+See `STAGE_0_REPORT.md` for toolchain selection and verification evidence.
+
 ## Logical boundaries
 - **platform/android** — launcher, Android lifecycle, platform services, haptics.
 - **core/game** — game orchestration and state.
