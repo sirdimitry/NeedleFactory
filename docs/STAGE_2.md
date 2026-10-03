@@ -485,3 +485,16 @@ Before asking for owner acceptance again:
 7. stop for owner review.
 
 Stage 3 remains locked.
+
+## Owner UI bug — white system strip / window inset
+
+Owner observed a bright white strip along the top edge in landscape orientation on the physical Android device.
+
+Required fix before Stage 2 acceptance:
+- Remove the white top strip in landscape.
+- Verify portrait has no equivalent white strip at the top, bottom, or around cutout/system-bar insets.
+- The app/background color must extend consistently through all visible window/inset areas so no light system/window background flashes or remains exposed.
+- Respect safe areas/cutouts without introducing a white gutter.
+- Check Android status/navigation bar appearance and edge-to-edge configuration in both orientations.
+- Verify after rotation, background/resume, and cold launch on Samsung SM-S938B.
+- Do not hide essential system navigation in a way that harms usability; the requirement is visual continuity, not necessarily forced immersive fullscreen.
