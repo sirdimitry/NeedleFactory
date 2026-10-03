@@ -418,3 +418,70 @@ Physical-device screenshot review confirms that Stage 2 is functionally readable
 
 ### Acceptance expectation
 Before the next owner review, perform a dedicated visual pass on the actual phone-resolution layout. Functionality alone is not sufficient. The next screenshot should read as a coherent miniature industrial machine line even with all text hidden.
+
+## Owner consolidated feedback — final polish before Stage 2 acceptance
+
+This section consolidates the owner's latest physical-device review. These are the final required corrections before Stage 2 can be considered for acceptance.
+
+### 1. Search difficulty / amount of straw
+- The current batch is still too easy because the intake table has too little straw and too much empty space.
+- Increase straw density substantially so the needle is not obvious and cannot be found almost immediately.
+- Preserve individual-straw readability; do not solve density by drawing a single opaque bundle.
+- Distribution should be irregular: denser pockets, overlaps, crossing angles and locally difficult areas rather than an even sparse spread.
+- The search/reveal loop should require attention and several deliberate interactions, not one glance or one broad swipe.
+- Keep the baseline challenging enough to be interesting, while avoiding impossible seeds.
+
+### 2. Needle appearance
+- Do NOT make the needle longer than the accepted Stage 1/current length.
+- Make it thinner.
+- Use a restrained realistic metallic color; remove the overly bright/glowing look.
+- Keep a clear sharp tip.
+- It may become more visible only during/after successful magnetic capture.
+
+### 3. Straw appearance / motion
+- Straw should be longer and thinner than the earlier wooden-block look.
+- Keep natural variation in length, angle, spacing and curvature.
+- Avoid parallel bundles that read as rope, hair, brush or cable.
+- Add gentle large-radius bends / smooth curvature where practical. Avoid abrupt kinked angles.
+- Preserve dense coverage while retaining separate-strand readability.
+
+### 4. Factory visual quality
+- The newer visual direction is significantly improved, but one more polish pass is required.
+- The whole line should read as one coherent miniature industrial system even if labels are hidden.
+- Conveyors, chutes, machine bodies and transfer points must visibly connect with believable joints, mouths, supports, rollers and frames.
+- Avoid floating bars, disconnected endpoints, clipping and impossible overlaps.
+- Strengthen buffer and packer silhouettes; make final-stage handoffs feel intentional and satisfying.
+- Keep the magnet spatially integrated with the material path instead of reading as a detached icon.
+
+### 5. Landscape composition
+- The current landscape layout is too stretched horizontally.
+- Bottom controls must NOT expand into long wide buttons merely because more width is available.
+- Buttons/toggles in landscape should remain approximately the same visual size as in portrait.
+- Recompose the landscape layout instead of stretching it.
+- Preferred options: compact side control panel (left or right), or a compact 2-row control cluster placed in free space that does not cover the factory.
+- The conveyor/factory itself should not become one excessively long straight line just to fill width.
+- Prefer a more compact authored layout (for example L-shaped, stacked/two-level, or another coherent modular composition) while preserving readable material flow.
+- Wide orientation should provide overview and usability, not horizontal elongation.
+
+### 6. HUD / controls
+- HUD has improved but should receive one final premium-game polish pass.
+- Use deliberate hierarchy, spacing and grouping.
+- Keep debug metrics subordinate/collapsible.
+- Controls must use a consistent visual system and must not steal excessive screen area from gameplay.
+- Portrait and landscape are two authored responsive compositions, not one layout stretched to fit.
+
+### 7. Lifecycle / state
+- Do not regress rotation/background-resume behavior.
+- Active batch, machine state and counters must remain intact while the process is alive.
+
+### 8. Review gate
+Before asking for owner acceptance again:
+1. apply the gameplay-density/difficulty changes;
+2. apply needle/straw visual corrections;
+3. perform a full factory visual polish pass;
+4. recompose landscape controls/layout without stretching buttons;
+5. verify portrait + landscape screenshots side by side on phone resolution;
+6. run tests/build/lint and physical-device smoke;
+7. stop for owner review.
+
+Stage 3 remains locked.
