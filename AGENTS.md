@@ -66,8 +66,8 @@ For each approved milestone:
 - a concise test checklist is supplied to the owner.
 
 ## Current authorization
-**Stage 0 and Stage 1 are accepted/completed.**
-The owner accepted the current Stage 1 tactile search prototype after a 10-round
-physical playtest on Samsung SM-S938B. Stage 2 remains locked: do not implement
-factory automation or begin the next milestone without separate explicit owner
-authorization.
+**Stage 0 and Stage 1 are accepted/completed. Stage 2 is authorized/current.**
+Implement only the first automation-line scope in `docs/STAGE_2.md`, including
+the carried-forward owner playtest requirements. Stage 3 economy/progression
+remains locked until Stage 2 is physically playtested, explicitly accepted and
+separately authorized by the owner.
