@@ -178,6 +178,56 @@ Mobile portrait composition:
 
 Rotation must preserve batch progress and machine states.
 
+## Owner visual-quality feedback — preliminary, binding for Stage 2 review
+
+The owner reports that the current in-progress Stage 2 graphics look rough, blocky and assembled from disconnected primitives. This is **not acceptable as the visual quality bar for Stage 2 review**, even if machine logic is correct.
+
+### Machine construction and continuity
+- Conveyors, chutes and machine bodies must form one visually coherent production line.
+- Do not draw a conveyor as a floating rectangle laid over machines.
+- Every transport segment must have believable start/end connections, supports, rollers, guards, funnels or transfer mouths where appropriate.
+- Material handoffs must look physically plausible: the player should be able to visually trace where straw/needle leaves one machine and enters the next.
+- Avoid visible overlaps, hard cuts, gaps and impossible intersections between machine geometry.
+- Machines need thickness, frames, feet/supports, housings and contact shadows so they read as objects occupying the same space.
+- Prefer a few well-composed connected machines over many crude disconnected blocks.
+
+### Shape language
+- Reduce the "rectangles with labels" look.
+- Use rounded/channeled industrial forms, cylinders/rollers, rails, ramps, guards, brackets, springs and mechanical silhouettes.
+- Corners may be softened/beveled visually; avoid harsh primitive clipping unless intentionally industrial.
+- Use consistent scale, stroke/thickness, perspective cues and shadow direction across all machines.
+
+### Conveyor quality bar
+A conveyor should visibly contain:
+- belt surface;
+- side rails/frame;
+- rollers or believable drive/end drums;
+- supports/legs or attachment to surrounding machinery;
+- a clear intake mouth;
+- a clear discharge/handoff;
+- moving texture/markers that communicate belt direction.
+
+A plain filled rectangle is not an acceptable final Stage 2 conveyor representation.
+
+### UI / HUD quality bar
+- HUD must look deliberately designed rather than debug text placed around the scene.
+- Use clear hierarchy, spacing, grouping, alignment and touch targets.
+- Controls should be compact, consistent and visually integrated with the industrial scene.
+- Debug telemetry must remain available but visually subordinate or collapsible.
+- Portrait and landscape layouts each need intentional composition, not automated scaling of one into the other.
+- Do not let labels cover machinery or moving material.
+
+### Art/technical-art workflow
+Before requesting owner review, perform a dedicated **visual polish pass** after machine logic is stable:
+1. inspect the whole line at phone resolution;
+2. identify disconnected/floating geometry and fix all handoffs;
+3. improve machine silhouettes and depth cues;
+4. unify materials/palette/shadows;
+5. improve HUD hierarchy and controls;
+6. verify portrait and landscape screenshots side-by-side;
+7. only then ask for owner visual review.
+
+This feedback does **not** ask for final production art yet. It requires a polished, coherent prototype that demonstrates the intended art direction rather than programmer primitives.
 ## Visual direction
 
 Continue the Art Bible: stylized 2.5D miniature industrial diorama.
