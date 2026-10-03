@@ -373,3 +373,48 @@ Stage 2 is complete only when:
 - the machine chain is judged understandable and satisfying enough to justify Stage 3 economy.
 
 Then STOP. **Stage 3 remains locked.**
+
+## Owner visual feedback — screenshot review, iteration 2
+
+Physical-device screenshot review confirms that Stage 2 is functionally readable but visually below the required quality bar.
+
+### Composition / line continuity
+- The production line does not yet read as one connected machine system.
+- The right-side conveyor reads as two rails/ladder-like bars rather than a believable belt conveyor.
+- Intake, conveyor, magnet, buffer and packer feel placed near each other rather than mechanically connected.
+- Diagonal transfer sections look like thick floating bars; replace them with believable chutes/ramps/rails with clear joints and entry/exit mouths.
+- Increase visual continuity so the eye can trace material flow without relying on labels.
+
+### Machine hierarchy / proportions
+- The vibration table currently dominates most of the screen while downstream machines are too small and visually weak.
+- Enlarge and strengthen the silhouettes of magnet, buffer and packer so they feel like real stages of the process.
+- Reduce empty/unused black space by composing the whole factory as one intentional scene.
+- Give every machine an obvious base, supports, housing and connection points.
+
+### Conveyor
+- The vertical conveyor must visibly have a belt surface, end drums/rollers, side rails and supports.
+- It must physically connect to the vibration-table discharge and to the next machine.
+- Material should sit on/inside the belt path, not appear to float through a rail cage.
+- Direction/motion should be communicated by belt markers or roller movement.
+
+### Magnet / buffer / packer
+- The magnet currently looks like a small detached icon. Integrate it around/over the transport path so its capture action is spatially obvious.
+- The buffer needs a recognizable funnel/chute/bin form, not a small outlined square with a label.
+- The packer needs a recognizable mechanical body and a clear infeed/outfeed; current geometry reads as a box with primitives.
+- Transfers must visually touch and align; no floating endpoints.
+
+### Straw rendering
+- Straw is improved relative to earlier wooden blocks, but it currently forms bundled rope/hair-like clumps because too many nearly parallel strands overlap.
+- Keep straws thin and longer, but add more variation in curvature, angle, spacing, length and local separation.
+- Avoid large coherent bundles that look like brushes or cables.
+- Preserve dense coverage while retaining individual-straw readability.
+
+### UI / HUD
+- Current UI still reads as debug/programmer UI: raw labels, large rectangular buttons, and separate machine toggles without a unified visual system.
+- Reduce floating text labels over the factory; use integrated nameplates/icons/state indicators where possible.
+- Group top status values into a compact hierarchy.
+- Bottom controls should share consistent spacing, shape language and state indication, with gameplay area receiving more visual priority.
+- Debug FPS/body text should be visually subordinate or collapsible.
+
+### Acceptance expectation
+Before the next owner review, perform a dedicated visual pass on the actual phone-resolution layout. Functionality alone is not sufficient. The next screenshot should read as a coherent miniature industrial machine line even with all text hidden.
