@@ -23,8 +23,18 @@ rejection, Next pile, background/resume and rotation. Recorded physical-device
 debug samples showed approximately 121 FPS. See `STAGE_1_REPORT.md` for evidence
 and measurement limits. Stage 2 is not authorized by this acceptance.
 
-## Stage 2 — First automation line [LOCKED]
-Introduce a small set such as magnet, vibration table, conveyor, separator and packer. Validate visible cause/effect.
+## Stage 2 — First automation line [CURRENT / AUTHORIZED]
+Build one continuous chain: dense intake/vibration table → conveyor → magnetic
+separator → sort/buffer → packer, with manual intake assistance and residue
+routing. Validate visible cause/effect, responsive portrait/landscape layout and
+machine-to-machine handoffs. The Stage 1 owner feedback on landscape reflow,
+thin/sharp needle, dense natural straw and lifecycle counter retention is a hard
+non-regression requirement.
+
+Exit gate: physical Samsung playtest, multiple successful batches, clear machine
+purpose/cause-effect, satisfying magnetic capture/packing, stable performance,
+true responsive rotation with retained state, and explicit owner acceptance.
+Stage 3 stays locked until that gate passes.
 
 ## Stage 3 — Economy & progression
 Costs, production metrics, meaningful upgrades, unlock pacing, save data and initial offline model.
