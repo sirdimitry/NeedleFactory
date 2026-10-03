@@ -66,4 +66,5 @@ For each approved milestone:
 - a concise test checklist is supplied to the owner.
 
 ## Current authorization
-Only **Stage 0: pre-production and technical foundation** is authorized. Do not implement Stage 1 gameplay until the owner explicitly approves it.
+**Stage 0 is accepted. Stage 1: tactile search vertical prototype is authorized.**
+Implement only the scope defined by `docs/STAGE_1.md`. Do not implement Stage 2 factory automation until the owner explicitly accepts Stage 1 and authorizes Stage 2.
