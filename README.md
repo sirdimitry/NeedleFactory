@@ -7,7 +7,12 @@ A mobile factory/physics game for Android built around the fantasy of finding a 
 
 **Stage 1 — tactile search prototype accepted/completed after the owner's
 10-round playtest on Samsung SM-S938B.**
-Stage 2 remains locked and requires separate explicit owner authorization.
+
+**Stage 2 — first automation line authorized/current.**
+Stage 3 remains locked until the automation prototype is physically playtested
+and explicitly accepted. Stage 2 must preserve the owner's Stage 1 feedback:
+real landscape reflow, thin/sharp understated needle, dense natural straw and
+lifecycle-safe session state.
 
 No gameplay implementation should expand beyond the currently approved milestone.
 
@@ -99,6 +104,8 @@ Haptic confirmation follows Android's system haptic preferences.
 - `docs/STAGE_0_REPORT.md` — accepted technical foundation.
 - `docs/STAGE_1.md` — authorized tactile-search prototype scope.
 - `CODEX_STAGE_1_PROMPT.md` — execution brief for Codex CLI.
-- `docs/STAGE_1_REPORT.md` — implementation, verification and 10-round checklist.
+- `docs/STAGE_1_REPORT.md` — accepted Stage 1 implementation and evidence.
+- `docs/STAGE_2.md` — authorized first automation-line scope.
+- `CODEX_STAGE_2_PROMPT.md` — execution brief for Codex CLI.
 
-Stage 1 is accepted. Stop here; Stage 2 requires separate explicit authorization.
+Stage 2 is current. Stage 3 is locked.
