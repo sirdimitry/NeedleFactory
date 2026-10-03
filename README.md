@@ -3,8 +3,10 @@
 A mobile factory/physics game for Android built around the fantasy of finding a needle in increasingly complex material streams, then automating the process into a satisfying production line.
 
 ## Status
-**Stage 0 — Foundation accepted after physical testing on Samsung SM-S938B.**
-Stage 1 requires separate explicit authorization and remains locked.
+**Stage 0 — accepted after physical testing on Samsung SM-S938B.**
+
+**Stage 1 — tactile search vertical prototype authorized and in development.**
+Stage 2 remains locked until Stage 1 is human-playtested and explicitly accepted.
 
 No gameplay implementation should expand beyond the currently approved milestone.
 
@@ -25,7 +27,7 @@ No gameplay implementation should expand beyond the currently approved milestone
 - Gradle / Android Studio
 - Git + GitHub
 
-Dependencies are not added merely because they are listed here. Stage 0 must validate versions, licenses, maintenance status and actual need.
+Dependencies are added only when a milestone has a demonstrated use case. Stage 1 is the first authorized Box2D use case.
 
 See `AGENTS.md` and `docs/` before making architectural changes.
 
@@ -51,48 +53,22 @@ $env:ANDROID_HOME = '<path-to-Android-SDK>'
 
 On Linux/macOS use `bash ./gradlew` with the same task names and exported
 `JAVA_HOME`/`ANDROID_HOME`. macOS desktop launch adds `-XstartOnFirstThread`.
-These hosts are configured but were not tested during Stage 0.
+These hosts were configured but not physically tested during Stage 0.
 
 Additional verification commands:
 
 ```powershell
 .\gradlew.bat :core:clean :lwjgl3:clean :android:clean :core:test :lwjgl3:assemble :android:assembleDebug :android:lintDebug
 .\gradlew.bat :lwjgl3:diagnosticSmoke
-.\gradlew.bat :lwjgl3:run -Pdiagnostics=false
 ```
 
-`diagnosticSmoke` requires a real OpenGL desktop session. It renders 240 frames,
-changes the actual window from landscape to portrait, invokes synthetic input
-and lifecycle callbacks, and writes two framebuffer screenshots in ignored
-`verification/`. It is separate from headless unit tests and CI. Actual Android
-input/background events were checked through ADB; desktop mouse/focus events
-remain in the owner checklist.
+Android Studio can run the `android` configuration directly on a connected
+device. Stage 0 was physically validated on Samsung SM-S938B.
 
-To install and launch with an emulator or device connected (replace the SDK
-placeholder above; add `-s <serial>` if multiple devices are connected):
+## Milestone documents
 
-```powershell
-& "$env:ANDROID_HOME/platform-tools/adb.exe" devices -l
-& "$env:ANDROID_HOME/platform-tools/adb.exe" install -r android/build/outputs/apk/debug/android-debug.apk
-& "$env:ANDROID_HOME/platform-tools/adb.exe" shell am start -W -n com.needlefactory.android/.AndroidLauncher
-& "$env:ANDROID_HOME/platform-tools/adb.exe" logcat -s NeedleFactory:I AndroidRuntime:E
-```
+- `docs/STAGE_0_REPORT.md` — accepted technical foundation.
+- `docs/STAGE_1.md` — authorized tactile-search prototype scope.
+- `CODEX_STAGE_1_PROMPT.md` — execution brief for Codex CLI.
 
-Android Studio can also run the `android` configuration. Debug APK:
-`android/build/outputs/apk/debug/android-debug.apk`. JVM test results:
-`core/build/reports/tests/test/index.html`. Lint:
-`android/build/reports/lint-results-debug.html`.
-
-## Diagnostic screen and review
-
-Both launchers reach the same portable Kotlin core. Tap/click anywhere to see
-a marker and press count. Rotate/resize, then leave and return to observe
-lifecycle counters. Debug diagnostics show FPS, averaged frame interval,
-viewport pixels, app version and build type. Android release builds disable
-these metrics/logs; desktop defaults to development diagnostics. No simulation
-clock, gameplay, economy or persistence exists yet. Process death starts a new
-diagnostic session with zero counters.
-
-CI validates JVM tests and both launcher builds; it does not run a GUI/emulator.
-See [Stage 0 report](docs/STAGE_0_REPORT.md) for versions, evidence, known
-limitations and the owner test checklist. **Stage 1 remains locked.**
+Stage 1 must stop for human playtesting before any Stage 2 work.
