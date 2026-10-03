@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.content.res.Configuration
 import android.view.View
 import android.view.WindowInsets
+import android.view.HapticFeedbackConstants
 import com.badlogic.gdx.backends.android.AndroidApplication
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration
 import com.needlefactory.game.BuildInfo
 import com.needlefactory.game.NeedleFactoryGame
+import com.needlefactory.game.PlatformFeedback
 
 class AndroidLauncher : AndroidApplication() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +29,15 @@ class AndroidLauncher : AndroidApplication() {
             useCompass = false
             disableAudio = true
         }
-        initialize(NeedleFactoryGame(BuildInfo(BuildConfig.VERSION_NAME, BuildConfig.BUILD_TYPE, BuildConfig.DEBUG)), config)
+        val feedback = PlatformFeedback {
+            window.decorView.post {
+                window.decorView.performHapticFeedback(if (Build.VERSION.SDK_INT >= 30)
+                    HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.VIRTUAL_KEY)
+            }
+        }
+        val seed = if (BuildConfig.DEBUG && intent.hasExtra("seed")) intent.getLongExtra("seed", 1L) else System.nanoTime()
+        initialize(NeedleFactoryGame(BuildInfo(BuildConfig.VERSION_NAME, BuildConfig.BUILD_TYPE, BuildConfig.DEBUG),
+            feedback, seed = seed), config)
 
         // Android 15/16 enforce edge-to-edge. Keep the GL surface inside system safe areas.
         val content = findViewById<View>(android.R.id.content)

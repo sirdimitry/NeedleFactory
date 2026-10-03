@@ -66,5 +66,8 @@ For each approved milestone:
 - a concise test checklist is supplied to the owner.
 
 ## Current authorization
-**Stage 0 is accepted. Stage 1: tactile search vertical prototype is authorized.**
-Implement only the scope defined by `docs/STAGE_1.md`. Do not implement Stage 2 factory automation until the owner explicitly accepts Stage 1 and authorizes Stage 2.
+**Stage 0 and Stage 1 are accepted/completed.**
+The owner accepted the current Stage 1 tactile search prototype after a 10-round
+physical playtest on Samsung SM-S938B. Stage 2 remains locked: do not implement
+factory automation or begin the next milestone without separate explicit owner
+authorization.

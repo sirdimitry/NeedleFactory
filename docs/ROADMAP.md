@@ -12,10 +12,16 @@ Deliverables:
 
 Exit gate passed after physical Samsung SM-S938B testing.
 
-## Stage 1 — Tactile search vertical prototype [CURRENT]
+## Stage 1 — Tactile search vertical prototype [ACCEPTED / COMPLETED]
 One tray/scene, clutter, one hidden needle, touch manipulation, exposure-gated discovery, satisfying feedback, prototype score and restart. Placeholder art is acceptable but should already feel coherent.
 
 Exit gate: at least 10 human-playtested rounds on the physical phone, no impossible rounds, controllable touch physics, no blind tap-through discovery, stable performance, and owner judgment that the core search loop is worth continuing.
+
+Exit gate passed: the owner completed and accepted the current iteration after
+10 rounds on Samsung SM-S938B, checking slow/fast drag, hidden-needle blind-tap
+rejection, Next pile, background/resume and rotation. Recorded physical-device
+debug samples showed approximately 121 FPS. See `STAGE_1_REPORT.md` for evidence
+and measurement limits. Stage 2 is not authorized by this acceptance.
 
 ## Stage 2 — First automation line [LOCKED]
 Introduce a small set such as magnet, vibration table, conveyor, separator and packer. Validate visible cause/effect.

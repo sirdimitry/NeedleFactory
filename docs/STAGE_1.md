@@ -238,7 +238,13 @@ Then STOP. **Stage 2 remains locked.**
 
 ## Owner playtest feedback — iteration 1 (2026-10-03)
 
-The first physical prototype was playable, but the following changes are required before Stage 1 can be accepted.
+Historical feedback from the first physical prototype is retained below.
+The owner subsequently **accepted/completed the current Stage 1 iteration**
+after a 10-round Samsung SM-S938B playtest and authorized its commit/push.
+That later explicit acceptance supersedes the earlier requirement to make
+these changes before acceptance. The suggestions below have not been
+implemented and require separate authorization for a future iteration.
+Stage 2 remains locked. See `STAGE_1_REPORT.md` for the accepted results.
 
 ### Responsive orientation
 - The current landscape presentation is not acceptable: it behaves like a narrow portrait column inside a wide screen.
@@ -267,8 +273,8 @@ The first physical prototype was playable, but the following changes are require
 - Fix this. Background/resume must preserve both the current round and the session found counter while the process remains alive.
 - Stage 1 still does not require persistence across true process death/cold restart.
 
-### Acceptance for this iteration
-Before asking for another owner review:
+### Original requested checks (historical)
+The earlier pre-acceptance feedback requested:
 - verify portrait and landscape layouts visually;
 - verify the needle is significantly harder to spot before clearing straw;
 - verify dense straw coverage with minimal empty tray;

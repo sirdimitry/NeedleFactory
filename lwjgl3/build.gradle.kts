@@ -15,6 +15,7 @@ dependencies {
     implementation(project(":core"))
     implementation(libs.gdx.lwjgl3)
     runtimeOnly("com.badlogicgames.gdx:gdx-platform:${libs.versions.gdx.get()}:natives-desktop")
+    runtimeOnly("com.badlogicgames.gdx:gdx-box2d-platform:${libs.versions.gdx.get()}:natives-desktop")
 }
 
 application { mainClass.set("com.needlefactory.lwjgl3.DesktopLauncher") }
@@ -26,6 +27,8 @@ tasks.named<JavaExec>("run") {
     }
     // Release-style diagnostics check: ./gradlew :lwjgl3:run -Pdiagnostics=false
     systemProperty("needlefactory.diagnostics", providers.gradleProperty("diagnostics").getOrElse("true"))
+    systemProperty("needlefactory.seed", providers.gradleProperty("seed").getOrElse(""))
+    systemProperty("needlefactory.screen", providers.gradleProperty("screen").getOrElse("search"))
 }
 
 // Optional real OpenGL verification. Not part of headless JVM tests or CI.
@@ -33,6 +36,16 @@ tasks.register<JavaExec>("diagnosticSmoke") {
     dependsOn(tasks.testClasses)
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.needlefactory.lwjgl3.DiagnosticSmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) {
+        jvmArgs("-XstartOnFirstThread")
+    }
+}
+
+tasks.register<JavaExec>("prototypeSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.PrototypeSmoke")
     workingDir = rootProject.projectDir
     if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) {
         jvmArgs("-XstartOnFirstThread")

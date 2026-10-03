@@ -5,8 +5,9 @@ A mobile factory/physics game for Android built around the fantasy of finding a 
 ## Status
 **Stage 0 — accepted after physical testing on Samsung SM-S938B.**
 
-**Stage 1 — tactile search vertical prototype authorized and in development.**
-Stage 2 remains locked until Stage 1 is human-playtested and explicitly accepted.
+**Stage 1 — tactile search prototype accepted/completed after the owner's
+10-round playtest on Samsung SM-S938B.**
+Stage 2 remains locked and requires separate explicit owner authorization.
 
 No gameplay implementation should expand beyond the currently approved milestone.
 
@@ -60,15 +61,44 @@ Additional verification commands:
 ```powershell
 .\gradlew.bat :core:clean :lwjgl3:clean :android:clean :core:test :lwjgl3:assemble :android:assembleDebug :android:lintDebug
 .\gradlew.bat :lwjgl3:diagnosticSmoke
+.\gradlew.bat :lwjgl3:prototypeSmoke
+.\gradlew.bat :lwjgl3:run -Pseed=42
 ```
 
 Android Studio can run the `android` configuration directly on a connected
-device. Stage 0 was physically validated on Samsung SM-S938B.
+device. Stages 0 and 1 were physically validated on Samsung SM-S938B.
+
+The default screen is now the Stage 1 tray: drag to push straw, uncover and
+tap the needle, then use **Next pile**. `Found` counts this session's finds;
+there is no currency, save or automation. Pause/resume and rotation preserve
+the current in-memory round; process death starts a new session. Portrait is
+primary; landscape fits the same portrait composition with side bars.
+
+Debug builds show seed, FPS/frame interval, bodies, active time, touches and
+drag distance below the tray. Logcat tag `NeedleFactory` prints a summary on
+each find. Use `-Pseed=<signed-long>` on desktop to reproduce a starting pile.
+To retain the Stage 0 diagnostic on desktop, use `-Pscreen=diagnostic`.
+The OpenGL prototype smoke uses accelerated time and synthetic gestures; it
+does not replace the owner's 10-round phone playtest.
+
+With the phone connected and USB debugging authorized:
+
+```powershell
+& "$env:ANDROID_HOME/platform-tools/adb.exe" devices -l
+& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' install -r android/build/outputs/apk/debug/android-debug.apk
+& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' shell am start -W -n com.needlefactory.android/.AndroidLauncher
+& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' logcat -s NeedleFactory:I AndroidRuntime:E
+```
+
+For a debug-only reproducible phone start, force-stop the app and add
+`--el seed 42` to `am start`. Release ignores the seed extra and hides metrics.
+Haptic confirmation follows Android's system haptic preferences.
 
 ## Milestone documents
 
 - `docs/STAGE_0_REPORT.md` — accepted technical foundation.
 - `docs/STAGE_1.md` — authorized tactile-search prototype scope.
 - `CODEX_STAGE_1_PROMPT.md` — execution brief for Codex CLI.
+- `docs/STAGE_1_REPORT.md` — implementation, verification and 10-round checklist.
 
-Stage 1 must stop for human playtesting before any Stage 2 work.
+Stage 1 is accepted. Stop here; Stage 2 requires separate explicit authorization.

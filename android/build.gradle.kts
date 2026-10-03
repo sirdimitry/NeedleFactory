@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.gdx.android)
     listOf("armeabi-v7a", "arm64-v8a", "x86_64").forEach { abi ->
         natives("com.badlogicgames.gdx:gdx-platform:${libs.versions.gdx.get()}:natives-$abi")
+        natives("com.badlogicgames.gdx:gdx-box2d-platform:${libs.versions.gdx.get()}:natives-$abi")
     }
 }
 

@@ -6,11 +6,18 @@ Implemented Stage 0 pins: Gradle 8.13, AGP 8.13.2, Kotlin 2.3.21, libGDX 1.14.2,
 JUnit 4.13.2; Gradle runs on JDK 21, shared Java/Kotlin bytecode targets 11.
 Android compile/target SDK 36, min SDK 23, Build Tools 35.0.0 (AGP default).
 AndroidX is a required transitive dependency of the libGDX Android backend,
-not an extra UI framework. KTX and Box2D are deferred. Exact rationale, sources,
+not an extra UI framework. Stage 0 omitted KTX and Box2D; Stage 1 adds Box2D below. Exact rationale, sources,
 licenses and test results are in `STAGE_0_REPORT.md`; pins live in
 `gradle/libs.versions.toml` and the wrapper properties.
 
 ## Core choice
+
+Stage 1 adds `gdx-box2d` **1.14.2** and matching
+`gdx-box2d-platform` natives: desktop and Android `armeabi-v7a`, `arm64-v8a`,
+`x86_64`. JVM native integration tests load matching libGDX core natives too.
+KTX remains absent: direct Box2D ownership is small and explicit. Existing
+Gradle/AGP/Kotlin/backend versions remain pinned. Stage 1 choices and results
+are recorded in `STAGE_1_REPORT.md`.
 
 **Kotlin + libGDX + selective KTX + selective Box2D**, generated/maintained as a Gradle project that opens cleanly in Android Studio.
 

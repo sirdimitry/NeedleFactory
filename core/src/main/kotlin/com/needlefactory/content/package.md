@@ -1,3 +1,4 @@
 # content boundary
 
-Reserved logical package. No Stage 0 implementation; see docs/ARCHITECTURE.md.
+Stage 1 `SearchConfig` centralizes prototype physics, input and discovery tunables.
+No progression/content library exists; see docs/ARCHITECTURE.md.

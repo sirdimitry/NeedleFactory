@@ -22,7 +22,30 @@ classes or empty Gradle modules. Shared prototype assets live in `assets/`.
 No fixed-step simulation, physics, economy or save implementation is introduced.
 See `STAGE_0_REPORT.md` for toolchain selection and verification evidence.
 
-## Logical boundaries
+## Implemented Stage 1 prototype
+
+The existing three modules are retained. `game/NeedleFactoryGame` now opens
+`presentation/SearchScreen`; the Stage 0 diagnostic remains available through
+the desktop launcher and its smoke harness. Disposal hides the current screen
+before freeing its native resources.
+
+- `content/SearchConfig`: one centralized set of prototype feel tunables.
+- `simulation/SearchRound`: domain-owned poses, seeded generator, visual
+  exposure/hit rules and `SearchSession` transitions. No rendering imports.
+- `simulation/FixedStep`: bounded 60 Hz clock with interpolation alpha.
+- `physics/SearchPhysics`: native Box2D ownership, collision filters, bounded
+  physical pusher and pose snapshots. Geometry stays in the tray's visual
+  envelope; it does not assign rewards or define discovery.
+- `presentation/SearchScreen`: single-touch intent, fitted camera, interpolated
+  placeholder rendering, success accent, HUD and debug metrics.
+- `game/PlatformFeedback`: one portable find-confirmation callback; Android
+  uses View haptic feedback on the main thread; desktop is a no-op.
+
+Session count, exposure and round lifecycle remain outside Box2D. No economy,
+factory or persistence code was added. Assets are still asynchronously loaded.
+See `STAGE_1_REPORT.md` for tunables, runtime evidence and pending acceptance.
+
+## Planned logical boundaries
 - **platform/android** — launcher, Android lifecycle, platform services, haptics.
 - **core/game** — game orchestration and state.
 - **simulation** — fixed-step simulation and world rules.

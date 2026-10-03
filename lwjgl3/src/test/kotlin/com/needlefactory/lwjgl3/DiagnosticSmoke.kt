@@ -14,7 +14,7 @@ import com.needlefactory.game.NeedleFactoryGame
 object DiagnosticSmoke {
     @JvmStatic fun main(args: Array<String>) {
         val snapshots = mutableListOf<Pair<String, Pixmap>>()
-        val game = NeedleFactoryGame(BuildInfo("0.0.1", "debug", true))
+        val game = NeedleFactoryGame(BuildInfo("0.0.1", "debug", true), diagnostic = true)
         var frames = 0
         var failure: Throwable? = null
         val listener = object : ApplicationAdapter() {

@@ -1,4 +1,4 @@
-name: Stage 0 build
+name: Build and tests
 
 on:
   push:
