@@ -234,3 +234,44 @@ Stage 1 is complete only when:
 - owner explicitly accepts Stage 1.
 
 Then STOP. **Stage 2 remains locked.**
+
+
+## Owner playtest feedback — iteration 1 (2026-10-03)
+
+The first physical prototype was playable, but the following changes are required before Stage 1 can be accepted.
+
+### Responsive orientation
+- The current landscape presentation is not acceptable: it behaves like a narrow portrait column inside a wide screen.
+- Recompose the UI for landscape instead of merely fitting/letterboxing the portrait layout.
+- In portrait, keep the tray large and centered with compact HUD.
+- In landscape, use the available width: the play tray should become a wide landscape work area and UI should move/reflow around it rather than leaving large unused side areas.
+- Preserve the current round and physics state across rotation.
+
+### Needle readability/difficulty
+- The current needle is too thick and too bright/easy to spot.
+- Make it materially thinner and longer, with a realistic pointed/sharp tip.
+- Add a subtle blunt/eye end if useful for recognizability, but keep the silhouette slender.
+- Reduce contrast/saturation/brightness so it reads as metal only after being uncovered, not as a glowing target.
+- Keep hit testing usable despite the thin visual; interaction hit area may be slightly more forgiving than the rendered width, but discovery must still require actual exposure.
+
+### Straw material
+- The current filler reads as wooden sticks rather than straw.
+- Make pieces thinner, longer, more fibrous/straw-like, with more variation in length, slight curvature/segmentation if cheap, and warmer natural straw tones.
+- Increase piece count and/or distribution density so the tray is densely covered with very little empty background.
+- The baseline Stage 1 difficulty should already require real searching; future stages may increase density further.
+- Prefer broad coverage over a central clump. Avoid large empty zones.
+- Keep performance healthy; use simplified collision/overlap rather than expensive full pairwise rigid-body interaction if necessary.
+
+### Session counter lifecycle bug
+- The session `Found: N` count currently resets after minimizing/backgrounding the app.
+- Fix this. Background/resume must preserve both the current round and the session found counter while the process remains alive.
+- Stage 1 still does not require persistence across true process death/cold restart.
+
+### Acceptance for this iteration
+Before asking for another owner review:
+- verify portrait and landscape layouts visually;
+- verify the needle is significantly harder to spot before clearing straw;
+- verify dense straw coverage with minimal empty tray;
+- verify touch clearing remains controllable at the increased density;
+- verify `Found: N` survives Home/background → resume;
+- rerun build/tests/lint and physical-device smoke checks.
