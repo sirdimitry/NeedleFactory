@@ -498,3 +498,22 @@ Required fix before Stage 2 acceptance:
 - Check Android status/navigation bar appearance and edge-to-edge configuration in both orientations.
 - Verify after rotation, background/resume, and cold launch on Samsung SM-S938B.
 - Do not hide essential system navigation in a way that harms usability; the requirement is visual continuity, not necessarily forced immersive fullscreen.
+
+## Owner progression correction — manual feeding must precede automation
+
+The current Stage 2 prototype automatically pulls straw into the line from the start. The owner rejects this as a progression mistake.
+
+Required design correction:
+- After the fully manual Stage 1 search, the first automation milestone must still require the player to physically feed/push straw into the intake by hand.
+- Straw must NOT be self-feeding by default at the beginning of Stage 2.
+- The player should manually move material from the table/intake zone into the machine feed mouth using touch.
+- The first purchased/unlocked feeder-type machine may later assist or partially automate this step.
+- Full automatic intake/feed should be a later progression reward, not baseline behavior.
+- Preserve the sense of progression: manual work -> assisted feeding -> partial automation -> full automatic feeding.
+
+Suggested progression model:
+1. Manual intake: player physically pushes straw into the feed gate.
+2. Assisted intake: a simple feeder/rake/vibration aid helps but still benefits from manual input.
+3. Automatic intake: a later machine continuously meters straw into the line.
+
+Stage 2 should implement the first step (manual feeding) and may include only minimal assistance if explicitly justified. Do not silently auto-feed the batch.
