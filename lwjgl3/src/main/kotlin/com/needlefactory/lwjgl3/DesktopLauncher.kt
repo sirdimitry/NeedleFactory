@@ -9,7 +9,7 @@ object DesktopLauncher {
     @JvmStatic fun main(args: Array<String>) {
         val diagnostics = System.getProperty("needlefactory.diagnostics", "true").toBoolean()
         val config = Lwjgl3ApplicationConfiguration().apply {
-            setTitle("NeedleFactory / Stage 1")
+            setTitle("NeedleFactory / Stage 2")
             setWindowedMode(480, 880)
             setWindowSizeLimits(360, 360, -1, -1)
             useVsync(true)
@@ -20,6 +20,7 @@ object DesktopLauncher {
         Lwjgl3Application(NeedleFactoryGame(
             BuildInfo("0.0.1", if (diagnostics) "debug" else "release", diagnostics),
             diagnostic = System.getProperty("needlefactory.screen") == "diagnostic",
+            search = System.getProperty("needlefactory.screen") == "search",
             seed = System.getProperty("needlefactory.seed", "").toLongOrNull() ?: System.nanoTime()), config)
     }
 }

@@ -80,8 +80,35 @@ For each approved milestone:
 - a concise test checklist is supplied to the owner.
 
 ## Current authorization
-**Stage 0 and Stage 1 are accepted/completed. Stage 2 is authorized/current.**
-Implement only the first automation-line scope in `docs/STAGE_2.md`, including
-the carried-forward owner playtest requirements. Stage 3 economy/progression
-remains locked until Stage 2 is physically playtested, explicitly accepted and
-separately authorized by the owner.
+**Stage 0, Stage 1 and Stage 2 are accepted/completed.**
+Owner accepted the current Stage 2 iteration after physical Samsung SM-S938B
+testing on 2026-10-05 and authorized its closing commit/push. Preserve the accepted
+first automation-line behavior in `docs/STAGE_2.md` and its owner requirements.
+**Stage 3 implementation remains locked until separate explicit owner authorization.**
+Stage 2 acceptance and the saved design proposal do not authorize economy,
+multi-needle gameplay, upgrades, saves or any other Stage 3 runtime work.
+
+Latest owner material clarification (2026-10-03) is binding: keep the current
+1.3-metre needle length, make its presentation thinner and metallic without
+glow; use longer/thinner straw with smooth large-radius bends and dense coverage.
+Owner confirmation for the Stage 2 closing commit/push has been received.
+Final owner feedback is binding: Stage 2 starts with manual physical feeding;
+no idle suction/automatic feeder. Keep the GL surface full-window, with a dark
+window/system-bar background and safe-area-aware content in both orientations.
+Latest owner needle clarification (2026-10-05) supersedes the earlier thinning
+direction: add only about 1–2 physical pixels of visual width (current tuning:
+1.25 px), retain the 1.3-metre length and unchanged physics body. Allow a subdued,
+sensor-driven internal metallic reflection, never glow or a through-straw marker.
+Latest owner threshold correction: the current needle size is accepted; do not
+change it. Reflection is fully off at <=60% straw-uncovered visibility and may
+fade in only above it. Gameplay/economy proposal is authorized as documentation
+only; multi-needle, currencies, unlocks and Stage 3 runtime remain unimplemented.
+Latest late-reveal polish retains accepted size and gates both polished tint and
+internal reflection above 60% exposure. Smooth gain: 0.32 at 75%, 0.70 at 90%,
+1.0 at full exposure. Keep the early-search body unchanged, straw occlusion and
+filtered attitude response; no external glow/bloom or timed sparkle.
+Latest responsive-scale correction: preserve screen-space search field/material
+and major-machine scale across rotation (within 5–10%). No landscape-only global
+zoom or needle compensation; fixed module sizes, authored anchors and elastic
+belt/transfer routing. Orientation changes presentation only, never batch/items,
+manual state, machines or counters.

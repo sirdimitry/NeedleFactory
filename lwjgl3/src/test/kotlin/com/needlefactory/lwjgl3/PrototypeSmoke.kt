@@ -16,7 +16,7 @@ object PrototypeSmoke {
     @JvmStatic fun main(args: Array<String>) {
         val snapshots = mutableListOf<Pair<String, Pixmap>>()
         var haptics = 0
-        val game = NeedleFactoryGame(BuildInfo("0.0.1", "debug", true), PlatformFeedback { haptics++ }, seed = 42L)
+        val game = NeedleFactoryGame(BuildInfo("0.0.1", "debug", true), PlatformFeedback { haptics++ }, seed = 42L, search = true)
         lateinit var screen: SearchScreen
         var frame = 0
         var row = 0

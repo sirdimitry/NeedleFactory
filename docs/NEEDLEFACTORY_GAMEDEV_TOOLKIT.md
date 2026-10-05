@@ -237,15 +237,22 @@ Primary skills:
 
 Save data must remain versioned and migration-aware.
 
-## Current Stage 2 recommended routing
+## Accepted Stage 2 maintenance routing
 
-For remaining Stage 2 polish/review, default to:
+Stage 2 is accepted/completed after owner Samsung testing (2026-10-05).
+Closing verification uses QA_VERIFY + ANDROID_PLATFORM + GAMEPLAY_CORE.
+Stage 3 remains unimplemented and needs separate owner authorization.
+
+For any separately requested Stage 2 polish/regression review, default to:
 
 `GAMEPLAY_CORE + PHYSICS_TOUCH + VISUAL_ART + UI_UX + QA_VERIFY + ANDROID_PLATFORM`
 
 Add `PERFORMANCE` only when profiling or frame/thermal evidence is being evaluated.
 
 Do not activate `ECONOMY_PROGRESSION` yet.
+Owner-authorized exception (2026-10-05): `ECONOMY_PROGRESSION` may be used only
+to author/review `GAMEPLAY_ECONOMY_PROPOSAL.md`. This is preparatory design, not
+Stage 3 authorization; no economy/progression runtime is authorized by the note.
 
 ## Owner visibility / change-control rule
 

@@ -46,6 +46,78 @@ factory or persistence code was added. Assets are still asynchronously loaded.
 See `STAGE_1_REPORT.md` for tunables, runtime evidence and pending acceptance.
 
 ## Planned logical boundaries
+### Stage 2 implementation decision
+The new automation loop needs persistent machine/item truth and two camera
+compositions. Rather than refactor away the accepted search prototype, retain
+`SearchScreen` as a desktop reference (`-Pscreen=search`) and make `FactoryScreen`
+the default. The three modules, toolchain, fixed-step clock and platform callback
+remain in place. No ECS, DI, economy or save system is introduced.
+
+- `FactoryConfig`: centralized geometry, feed and processing tunables.
+- `FactorySession` / `FactoryBatch`: pure Kotlin seeded items, machine toggles,
+  route transitions and exactly-once recovered/missed/packaged counters.
+- `FactoryIntakePhysics`: Box2D only on the intake; one body per twelve-strand
+  tuft, three smooth-tangent collision sections, bounded physical finger and
+  actual feed-edge handoff. Tufts overlap each other; simplified bulk contact
+  is intentional. Downstream items use deterministic normalized route progress.
+- `FactoryLayout`: authored landscape flow and portrait stacked composition.
+- `FactoryScreen`: interpolated geometry, machinery, touch intent and haptic
+  notification. Rendering never feeds an item or produces a package.
+- `NeedleLighting` / Android `NeedleTiltSensor`: optional filtered device attitude
+  affects only internal metal shading. `NeedleVisibility` estimates exposed axis
+  length against the same curved/projected straw poses as rendering; <=60% disables
+  reflection completely. This presentation heuristic is not discovery/reward truth.
+
+The dedicated visual pass splits original procedural art into `FactoryDiorama`,
+shared `FactoryDrawing`/palette and `FactoryHud`. This makes projection, supports,
+shadows, material palette and instrument typography consistent without adding a
+runtime framework. `FactoryLayout` attachment points define both visible
+connections and interpolated material endpoints. The first 12% of BELT animation
+traverses the receiving pan, the middle portion runs on the framed belt and the
+last 10% follows an attached discharge chute. The capture zone still uses the
+same authoritative 55% route crossing. These mappings do not change production
+logic, timings, item identity, physics, needle length or session lifecycle.
+
+The visual smoke renders screenshots to real GL framebuffers at 1080×2160 and
+2160×1080; desktop OS window-size limits cannot silently turn portrait into a
+square screenshot. Those buffers are verification-only, never production work.
+
+`NeedleFactoryGame` owns the session independently of screen/native resources.
+Android retains that portable object across configuration recreation through
+Activity non-configuration retention. Normal pause/resume and resize merely
+cancel the current finger gesture and discard the clock remainder. Native
+rehydration restores item poses/velocities; it creates bodies only for items
+still on the intake. Counters, routes, progress and enabled machines remain
+unchanged. There is no process-death persistence and no background/offline work.
+
+The final owner correction removes directional intake forces. A downstream
+finger contact arms the contacted item; only that item physically reaching the
+gate can hand off. Manual eligibility, item velocity and the metering remainder
+live in the portable session, so native rehydration does not turn untouched
+material into automatic production. Without input all intake poses settle/hold.
+No feeder unlock, economy or automation selection is implemented at Stage 2.
+
+Android's GL surface fills the window without root padding. A dark application
+theme and transparent system bars cover launch/transition frames. `SafeArea`
+passes pixel obstructions onto the GL thread; `FactoryScreen` keeps a full-window
+viewport, offsets only content coordinates and clears the entire surface. Insets
+are refreshed on configuration/resume; touch unprojection shares that camera.
+
+Responsive module scale is now explicit in `FactoryCanvas`, independent of
+orientation selection. Its device baseline is max(400 / raw short pixel axis,
+814 / (raw long pixel axis minus the larger obstructed-axis total)): compact displays reserve room for the fixed module
+bay in both orientations, without a landscape-only fit/zoom. Samsung uses
+400 / 1080 units per pixel in both orientations. `FactoryLayout` positions the
+same 248 x 198.4 tray and unit-1 machine housings with authored anchors; belt length
+and transfer directions change instead of material/machine size. Insets still
+offset safe content on a full-window Surface. Fixed-size modules, shared handoff
+ports and inverse touch transforms never change simulation dimensions or state.
+
+The packer commits its result after its visible jaw cycle and package ejection.
+Turning the separator off affects needles that have not yet crossed its capture
+zone; an already latched capture remains committed. Belt-off stops feeding and
+transport; an already loaded packer may cycle, then holds ejection until restart.
+
 - **platform/android** — launcher, Android lifecycle, platform services, haptics.
 - **core/game** — game orchestration and state.
 - **simulation** — fixed-step simulation and world rules.

@@ -98,6 +98,13 @@ Use three tiers:
 Game economy may never depend on a decorative particle.
 
 ## Performance baseline
+Stage 2 keeps the existing pinned dependencies and uses Box2D only on the
+intake (322 initial bodies for 3,840 visual strands). Downstream transport is
+pure fixed-step Kotlin. Procedural quadratic ribbons and batched geometry
+remain replaceable prototype art. Barlow-derived bitmap UI typography includes
+its source, SHA-256 and SIL OFL license; no new runtime libraries are introduced.
+See `STAGE_2_REPORT.md` for verification limits.
+
 
 Stage 0 establishes instrumentation hooks; Stage 1 measures actual budgets.
 - Balanced target: 60 FPS.

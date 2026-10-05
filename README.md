@@ -8,9 +8,22 @@ A mobile factory/physics game for Android built around the fantasy of finding a 
 **Stage 1 — tactile search prototype accepted/completed after the owner's
 10-round playtest on Samsung SM-S938B.**
 
-**Stage 2 — first automation line authorized/current.**
-Stage 3 remains locked until the automation prototype is physically playtested
-and explicitly accepted. Stage 2 must preserve the owner's Stage 1 feedback:
+**Stage 2 — first automation line accepted/completed after the owner's physical
+playtest on Samsung SM-S938B (2026-10-05).**
+Latest material clarification is recorded in `docs/STAGE_2.md` and the
+Art Bible: accepted needle dimensions, exposure-gated polished metal and smooth dense straw.
+The separate visual polish pass follows the updated `docs/SKILLS.md` craft profile:
+connected machinery on a workshop plinth, framed/supported belt and continuous
+transfer chutes, shallow 2.5D depth, a redesigned instrument HUD and licensed
+bitmap typography. The owner accepted the current visual/gameplay iteration.
+The final-feedback pass increases the intake to 3,840 varied crossing
+straws, strengthens the mechanical nodes and authors a compact two-level
+landscape workshop with a fixed-size side control cluster. Intake is manual:
+push material into the feed mouth; automatic feeding remains a future unlock.
+Android uses a full-window dark GL surface with safe-area-aware content.
+Search field and main-machine screen-space scale match in both orientations.
+Stage 3 requires separate explicit owner authorization and has not started.
+The accepted Stage 2 preserves the owner's Stage 1 feedback:
 real landscape reflow, thin/sharp understated needle, dense natural straw and
 lifecycle-safe session state.
 
@@ -67,32 +80,43 @@ Additional verification commands:
 .\gradlew.bat :core:clean :lwjgl3:clean :android:clean :core:test :lwjgl3:assemble :android:assembleDebug :android:lintDebug
 .\gradlew.bat :lwjgl3:diagnosticSmoke
 .\gradlew.bat :lwjgl3:prototypeSmoke
+.\gradlew.bat :lwjgl3:factorySmoke
 .\gradlew.bat :lwjgl3:run -Pseed=42
 ```
 
 Android Studio can run the `android` configuration directly on a connected
-device. Stages 0 and 1 were physically validated on Samsung SM-S938B.
+device. Stages 0, 1 and 2 were physically validated and accepted on Samsung SM-S938B.
 
-The default screen is now the Stage 1 tray: drag to push straw, uncover and
-tap the needle, then use **Next pile**. `Found` counts this session's finds;
-there is no currency, save or automation. Pause/resume and rotation preserve
-the current in-memory round; process death starts a new session. Portrait is
-primary; landscape fits the same portrait composition with side bars.
+The default screen is the Stage 2 automation line: dense vibration table,
+conveyor, magnet, buffer and packer. Each batch contains one needle and 320
+physical straw patches (3,840 slender curved visual strands). Push material
+right into the feed mouth with repeated finger sweeps. No material feeds without
+touch; already delivered items continue through the machines. **Pause line** stops
+the whole simulation; **Feed gate** holds/releases hand-delivered material, and
+the other switches control belt, magnet and packer. **Next batch** unlocks
+only after every item reaches output, residue or missed-metal storage. An
+enabled packer produces one package/haptic; a disabled magnet causes a visible
+miss. Counters are session diagnostics, not currencies.
 
-Debug builds show seed, FPS/frame interval, bodies, active time, touches and
-drag distance below the tray. Logcat tag `NeedleFactory` prints a summary on
-each find. Use `-Pseed=<signed-long>` on desktop to reproduce a starting pile.
-To retain the Stage 0 diagnostic on desktop, use `-Pscreen=diagnostic`.
-The OpenGL prototype smoke uses accelerated time and synthetic gestures; it
-does not replace the owner's 10-round phone playtest.
+Portrait and landscape reflow the same active state. Background/resume and
+configuration recreation preserve progress/counters while the process lives.
+Cold launch/process death starts fresh; there are no saves or offline progress.
+Tap the upper-right **i** to open/close FPS/frame interval/body count telemetry
+inside the control console. Logcat tag `Factory` records seed, duration, routes,
+buffer, throughput, manual-feed eligibility, machine states and touch/drag data, plus a
+terminal batch summary. Use `-Pseed=<signed-long>` to reproduce a batch.
+The Stage 0 diagnostic and Stage 1 reference remain available on desktop with
+`-Pscreen=diagnostic` and `-Pscreen=search`. The factory OpenGL smoke runs ten
+accelerated batches and does not replace owner device review. See
+`docs/STAGE_2_REPORT.md` for verification and the Samsung checklist.
 
 With the phone connected and USB debugging authorized:
 
 ```powershell
 & "$env:ANDROID_HOME/platform-tools/adb.exe" devices -l
 & "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' install -r android/build/outputs/apk/debug/android-debug.apk
-& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' shell am start -W -n com.needlefactory.android/.AndroidLauncher
-& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' logcat -s NeedleFactory:I AndroidRuntime:E
+& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' shell am start -W -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000 -n com.needlefactory.android/.AndroidLauncher
+& "$env:ANDROID_HOME/platform-tools/adb.exe" -s '<phone-serial>' logcat -s Factory:I NeedleFactory:I AndroidRuntime:E
 ```
 
 For a debug-only reproducible phone start, force-stop the app and add
@@ -105,7 +129,9 @@ Haptic confirmation follows Android's system haptic preferences.
 - `docs/STAGE_1.md` — authorized tactile-search prototype scope.
 - `CODEX_STAGE_1_PROMPT.md` — execution brief for Codex CLI.
 - `docs/STAGE_1_REPORT.md` — accepted Stage 1 implementation and evidence.
-- `docs/STAGE_2.md` — authorized first automation-line scope.
+- `docs/STAGE_2.md` — accepted first automation-line scope and regression requirements.
 - `CODEX_STAGE_2_PROMPT.md` — execution brief for Codex CLI.
+- `docs/STAGE_2_REPORT.md` — accepted Stage 2 implementation, tests and device evidence.
+- `docs/GAMEPLAY_ECONOMY_PROPOSAL.md` — saved design proposal, not approved for implementation.
 
-Stage 2 is current. Stage 3 is locked.
+Stages 0–2 are accepted/completed. Stage 3 is next and remains locked.

@@ -28,7 +28,7 @@ tasks.named<JavaExec>("run") {
     // Release-style diagnostics check: ./gradlew :lwjgl3:run -Pdiagnostics=false
     systemProperty("needlefactory.diagnostics", providers.gradleProperty("diagnostics").getOrElse("true"))
     systemProperty("needlefactory.seed", providers.gradleProperty("seed").getOrElse(""))
-    systemProperty("needlefactory.screen", providers.gradleProperty("screen").getOrElse("search"))
+    systemProperty("needlefactory.screen", providers.gradleProperty("screen").getOrElse("factory"))
 }
 
 // Optional real OpenGL verification. Not part of headless JVM tests or CI.
@@ -50,4 +50,12 @@ tasks.register<JavaExec>("prototypeSmoke") {
     if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) {
         jvmArgs("-XstartOnFirstThread")
     }
+}
+
+tasks.register<JavaExec>("factorySmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.FactorySmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
 }

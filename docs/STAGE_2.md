@@ -1,14 +1,17 @@
 # Stage 2 — First Automation Line
 
 ## Authorization
-Stages 0 and 1 are accepted. **Stage 2 is now authorized. Stage 3 remains locked.**
+**Stages 0, 1 and 2 are accepted/completed. Stage 3 remains locked.**
+Owner accepted this Stage 2 iteration after physical Samsung SM-S938B testing on
+2026-10-05 and authorized its closing commit/push. The requirements below describe
+the accepted scope and remain regression constraints, not authorization for Stage 3.
 
 ## Goal
 Prove that watching material physically travel through a small machine chain is understandable, satisfying and meaningfully different from manual searching.
 
 Stage 2 must answer:
 
-> Does the player immediately understand what each machine does, enjoy watching the chain work, and feel that manual intervention can still help without being mandatory?
+> Does physically feeding the line remain satisfying, while each downstream machine's purpose and payoff are immediately understandable?
 
 This milestone validates automation and visible cause/effect. It does **not** implement the real economy, prices, upgrades, prestige, offline progress or factory-builder complexity.
 
@@ -17,6 +20,12 @@ This milestone validates automation and visible cause/effect. It does **not** im
 These requirements came directly from the Stage 1 physical playtest and remain binding in Stage 2. Do not regress them.
 
 ### Responsive orientation
+- Latest owner scale correction: the search tray and major machines must keep
+  approximately identical screen-space size (<=5–10% difference) across rotation.
+  Do not compensate by enlarging only the needle. Use a stable device canvas scale,
+  fixed-size modules and orientation-specific anchors; belts and transfer routing
+  absorb space changes. Portrait scale must not regress. Compare the same paused
+  seed/state in both orientations and verify touch mapping and insets on Samsung.
 - Landscape must be a genuine responsive composition, not a narrow portrait column centered inside a wide screen.
 - In landscape, use the screen width for the factory and reflow HUD/controls around it.
 - In portrait, use a deliberately composed portrait factory layout rather than shrinking the landscape line until it is unreadable.
@@ -24,12 +33,32 @@ These requirements came directly from the Stage 1 physical playtest and remain b
 - Background/resume must preserve the active batch, machine states and session counters while the process remains alive.
 
 ### Needle
+- Latest owner feedback accepts the current size/thickness. Retain it. The
+  sensor-driven highlight is fully disabled when straw-uncovered visibility is
+  <=60%, and softly enabled only above 60%. Use rendered curved-straw coverage,
+  keep the reflection inside the silhouette and beneath straw, with a calm fallback.
+- Latest late-payoff polish retains size and early-search body color. Above 60%,
+  smooth exposure gain reaches 0.32 at 75%, 0.70 at 90%, and 1.0 at full opening.
+  Cool polished steel and nested soft internal reflections reward the late reveal;
+  no external glow, no through-cover lighting or time-driven sparkle.
+- Latest owner correction (2026-10-05) supersedes the earlier thinning-only
+  presentation: slightly increase rendered thickness by about 1–2 physical pixels
+  (current tuning 1.25 px), keeping it only a little thicker than ordinary straw.
+  Length stays 1.3 m. Add a restrained internal metal reflection responding to
+  filtered device attitude, with a static fallback when sensors are unavailable.
+  Keep straw occlusion and search difficulty; no glow, neon, external outline or
+  timed blinking. Physical needle/search/interaction geometry stays unchanged.
+- Latest owner clarification (2026-10-03): retain the current Stage 1 length
+  (1.3 simulation metres). Do not lengthen the needle for readability. Reduce
+  its visual width, use restrained metallic grey and a sharp tip; no glow.
 - The needle must remain thin, long and recognizably sharp at one end.
 - It must not be thick, oversized, brightly glowing or visually trivial to spot.
 - Before extraction, use restrained metallic contrast. A brighter success highlight is allowed only after the machine has captured/recovered it.
 - Interaction/detection geometry may be slightly more forgiving than the visual width, but the rendered object must remain slender.
 
 ### Straw
+- Latest owner clarification: use smooth, large-radius bends rather than
+  angular linked stick segments. Preserve high coverage with little empty area.
 - Straw must read as straw, not wooden sticks.
 - Use thinner, longer pieces with natural variation in length, warm straw tones and subtle segmentation/curvature where cheap.
 - Material should be dense with very little empty tray/table area; do not return to a sparse central clump.
@@ -52,9 +81,11 @@ Residue/straw that is not captured continues to a residue/recycle bin.
 Each batch contains dense straw and exactly one needle. When the line finishes the batch, the player can start the next batch; an optional auto-next debug toggle is allowed, but production economy is not.
 
 ### Manual relevance
-The player may swipe/nudge material on the vibration/intake table using the familiar Stage 1 physical touch interaction. This can improve feeding/spreading but must not be required for the line to eventually complete a normal batch.
-
-Automation should feel useful, while manual touch remains a satisfying assist rather than becoming obsolete.
+The latest owner correction supersedes the original optional-assist/hands-off
+intake requirement: the player must physically push material into the feed mouth.
+Without touch, the initial material stays on the table. Downstream transport,
+capture and packing remain automatic once the player has delivered material.
+Assisted feeding and a full automatic feeder are future unlocks, outside Stage 2.
 
 ## Machines
 
@@ -64,7 +95,7 @@ Purpose: loosen dense straw and meter it toward the conveyor.
 Required behavior:
 - material begins dense, with the needle initially visually concealed;
 - table visibly vibrates/oscillates;
-- pieces gradually drift toward a feed edge/gate;
+- pieces reach the feed edge/gate through finger contact, without idle directional drift;
 - manual swiping can redistribute the material;
 - do not simulate thousands of expensive rigid bodies merely for visual density.
 
@@ -116,7 +147,7 @@ Stage 2 should include lightweight controls sufficient to understand the chain:
 - turning a machine off must have an immediately understandable consequence.
 
 If individual toggles are implemented:
-- vibration off → intake stops feeding;
+- feed gate off → hand-delivered intake stays held; touch movement remains available;
 - conveyor off → transport stops;
 - separator off → needle can pass to a visible missed-metal path/bin rather than silently succeeding;
 - packer off → captured needle waits in the buffer.
@@ -317,8 +348,8 @@ Add an OpenGL/runtime smoke that exercises at least several complete batches, bu
 
 On Samsung SM-S938B:
 1. Run at least 10 complete batches.
-2. Watch at least one batch mostly hands-off.
-3. Use manual swipes on intake and judge whether assistance is useful and satisfying.
+2. Leave a fresh batch untouched: it must not self-feed. Watch delivered material run downstream hands-off.
+3. Use repeated manual swipes into the feed mouth and judge controllability and satisfaction.
 4. Confirm each machine's purpose is understandable without reading debug internals.
 5. Pause/resume the whole line.
 6. If per-machine controls exist, toggle each one and verify visible cause/effect.
