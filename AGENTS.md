@@ -28,6 +28,12 @@ Use relevant installed skills when available. Skills are guidance, not permissio
 - Do not require paid asset-generation APIs or commit external-service secrets.
 - For every visual acceptance claim, prefer reproducible evidence on the target device: screenshot/state/orientation/interaction plus an explicit acceptance criterion.
 - Record reusable gotchas as `symptom -> cause -> fix` in the current stage report.
+## Toolkit routing and owner visibility
+- Before substantial gameplay, visual, UI, Android, QA or performance work, read `docs/NEEDLEFACTORY_GAMEDEV_TOOLKIT.md`.
+- Activate only the smallest relevant project profiles; do not bulk-load all external skills.
+- In the work summary, include one concise line such as `Toolkit: VISUAL_ART + UI_UX + QA_VERIFY`.
+- Routine use of already approved profiles is allowed, but surface any proposed new source/tool/plugin/service/runtime dependency or locked profile to the owner before adoption.
+- Project-local milestone rules override external skill guidance.
 ## Architecture rules
 1. Keep simulation/gameplay state independent from rendering and UI.
 2. Economy must not depend on presentation code.
