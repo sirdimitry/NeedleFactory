@@ -131,6 +131,7 @@ Haptic confirmation follows Android's system haptic preferences.
 - `docs/STAGE_1_REPORT.md` — accepted Stage 1 implementation and evidence.
 - `docs/STAGE_2.md` — accepted first automation-line scope and regression requirements.
 - `CODEX_STAGE_2_PROMPT.md` — execution brief for Codex CLI.
+- `docs/PROGRESS.md` — permanent milestone history, immutable tags, curated screenshots and release links.
 - `docs/STAGE_2_REPORT.md` — accepted Stage 2 implementation, tests and device evidence.
 - `docs/GAMEPLAY_ECONOMY_PROPOSAL.md` — saved design proposal, not approved for implementation.
 
