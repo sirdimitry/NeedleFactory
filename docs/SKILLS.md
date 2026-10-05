@@ -2,6 +2,13 @@
 
 These are **reference skills**, not vendored runtime dependencies. Their licenses and applicability must be respected. Do not copy large third-party skill repositories into NeedleFactory unless explicitly approved.
 
+## NeedleFactory curated routing layer
+
+The authoritative project-local skill router is `docs/NEEDLEFACTORY_GAMEDEV_TOOLKIT.md`.
+
+It curates approved skills and role lenses from multiple external repositories into task profiles such as `GAMEPLAY_CORE`, `PHYSICS_TOUCH`, `VISUAL_ART`, `UI_UX`, `QA_VERIFY`, `PERFORMANCE`, and `ANDROID_PLATFORM`.
+
+Do not bulk-activate every referenced skill. Use the smallest profile set required for the task, and follow the toolkit's owner-visibility/change-control rules.
 ## Tier A — use from the beginning
 
 ### Game design
