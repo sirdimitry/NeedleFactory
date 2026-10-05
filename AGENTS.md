@@ -20,6 +20,14 @@ Before substantial decisions, reason from the relevant discipline:
 
 Use relevant installed skills when available. Skills are guidance, not permission to introduce unnecessary frameworks.
 
+## Visual production and verification toolkit
+- Read `docs/SKILLS.md` before substantial visual, asset-pipeline or QA work.
+- The project selectively adopts the visual-production, game-automation, verification-oracle and field-note ideas from `rehan-remade/universal-modder`.
+- Treat those skills as guidance only; NeedleFactory is not a modding project.
+- Do not introduce reverse-engineering/mod-loader tooling into normal development.
+- Do not require paid asset-generation APIs or commit external-service secrets.
+- For every visual acceptance claim, prefer reproducible evidence on the target device: screenshot/state/orientation/interaction plus an explicit acceptance criterion.
+- Record reusable gotchas as `symptom -> cause -> fix` in the current stage report.
 ## Architecture rules
 1. Keep simulation/gameplay state independent from rendering and UI.
 2. Economy must not depend on presentation code.
