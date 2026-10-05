@@ -93,6 +93,50 @@ When relevant external skills are available, prefer skills covering:
 
 Do not add a runtime framework merely to improve appearance. The skill upgrade is primarily a **design/review discipline**, not a dependency.
 
+## Universal Modder — adopted visual-production / verification toolkit
+
+Source: `rehan-remade/universal-modder` (MIT).
+
+NeedleFactory does **not** adopt Universal Modder as a game-modding framework. We selectively reuse its agent workflow and relevant skills as design/verification guidance.
+
+### Approved uses
+- `asset-pipeline`: reference workflow for turning authored/generated art into engine-ready sprites/textures/frames.
+- `fal-assets`: optional reference for asset-generation workflows only; do not require fal or any paid API for the project. Use only with explicit owner approval and never commit API keys.
+- `game-automation`: reference ideas for repeatable launch/screenshot/window verification where they fit our Android/desktop test flow.
+- `share-field-notes` / knowledge-base method: preserve exact versions, verification method, and `symptom -> cause -> fix` notes so later agents do not rediscover solved problems.
+- verification-oracle mindset: define observable evidence for visual/gameplay claims before declaring work complete.
+
+### NeedleFactory adaptation
+For visual/gameplay work, agents should combine Universal Modder ideas with our existing technical-art and game-UI rules:
+1. build one small visual slice;
+2. run it on the real target device where possible;
+3. capture portrait/landscape evidence;
+4. compare against explicit owner acceptance criteria;
+5. record defects as reproducible observations, not vague impressions;
+6. fix and re-verify;
+7. add durable field notes to the relevant `STAGE_X_REPORT.md`.
+
+### Do not use by default
+- `mod-any-game`, engine reconnaissance, loaders, decompilation, reverse engineering, memory tooling, Cheat Engine, Frida, Ghidra/IDA workflows, or other PC-game-mod routes are outside NeedleFactory's normal development path.
+- Do not install or ship Universal Modder runtime code inside the Android game.
+- Do not add Blender/ComfyUI/fal dependencies unless a concrete art task needs them and the owner explicitly approves.
+
+### Codex installation reference
+If the owner later chooses to enable the plugin in Codex CLI, the upstream documented route is:
+
+```text
+codex plugin marketplace add rehan-remade/universal-modder
+codex plugin add universal-modder@universal-modder
+```
+
+A skills-only alternative documented upstream is:
+
+```text
+npx skills add https://github.com/rehan-remade/universal-modder
+```
+
+Installation is an environment action, not a repository dependency. Verify the installed plugin/skills and applicable license before use.
+
 ## Skill-selection rule
 
 For every substantial task:
