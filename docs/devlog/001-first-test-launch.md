@@ -1,7 +1,7 @@
 # 001 — Технический запуск Stage 0 / Stage 0 Technical Boot
 
-> Дата снимка неизвестна; запись исправлена 2026-10-13.  
-> Screenshot date unknown; entry corrected on 2026-10-13.
+> **Дата первого зафиксированного запуска: 3 октября 2026 года, 19:08** (время по галерее Samsung; пользователь подтвердил эту дату как начало работы над игрой). Запись обновлена 2026-10-13.  
+> **First documented launch: October 3, 2026, 7:08 PM** (Samsung Gallery timestamp; the creator confirms this as the project's starting date). Entry updated on 2026-10-13.
 
 ## Русский
 
@@ -20,6 +20,10 @@
 - **0.0.1 / debug** — подпись версии и режима.
 - Внизу: **Tap / click anywhere** и **Rotate, resize, leave and return** — подсказки к техническим тестам.
 - На экране видны светлые полосы сверху и снизу; это наблюдение по изображению, без установленной причины.
+
+### Датировка и источник
+
+Галерея Samsung показывает **Saturday, October 3, 2026 · 7:08 PM** для файла **Screenshot_20261003_190846.jpg** в папке **/Internal storage/DCIM/Screenshots**. Параметры изображения: **1080 × 2340 px**, **254 KB** (по экрану сведений). В имени файла содержится время **19:08:46**. Дата считается началом проекта по подтверждению автора; время создания скриншота само по себе не доказывает время первого изменения кода.
 
 ### Историческое значение
 
@@ -50,6 +54,10 @@ This is the actual first screenshot of NeedleFactory. There is no gameplay field
 - **0.0.1 / debug** — displayed version and mode.
 - Bottom instructions: **Tap / click anywhere** and **Rotate, resize, leave and return**.
 - Light bands are visible at the top and bottom; their cause is not established.
+
+### Dating and provenance
+
+Samsung Gallery shows **Saturday, October 3, 2026 · 7:08 PM** for **Screenshot_20261003_190846.jpg**, located in **/Internal storage/DCIM/Screenshots**. Displayed image details: **1080 × 2340 px**, **254 KB**. The filename encodes **19:08:46**. The creator identifies this date as the start of the project; the screenshot timestamp alone does not establish the time of the first code change.
 
 ### Historical significance
 
