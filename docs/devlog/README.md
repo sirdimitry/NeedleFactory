@@ -1,8 +1,8 @@
 # Дневник разработки / Development Log
 
-Хронологические заметки о ходе работы над NeedleFactory — с лёгкой самоиронией автора, режиссёра монтажа, вайбкодера и энтузиаста ИИ.
+Хронологические заметки о ходе работы над NeedleFactory — с лёгкой самоиронией автора, специалиста по видеопроизводству, вайбкодера и энтузиаста ИИ.
 
-Chronological notes on NeedleFactory — with a touch of self-deprecating humor from its creator, a video editor, vibe coder, and AI enthusiast.
+Chronological notes on NeedleFactory — with a touch of self-deprecating humor from its creator, a video production professional, vibe coder, and AI enthusiast.
 
 ## Записи / Entries
 
