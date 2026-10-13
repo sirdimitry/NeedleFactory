@@ -5,15 +5,16 @@
 
 ## Русский
 
-**Статус:** первый скриншот, техническая проверка Stage 0.
+**Статус:** первые два скриншота, техническая проверка Stage 0.
 
-Это настоящий первый скриншот проекта NeedleFactory. На нём ещё нет игрового поля: показан технический экран проверки запуска, отображения текста и обработки ввода.
+С этих двух экранов началась моя NeedleFactory. Иголки и соломы ещё нет, зато шрифт уже вышел на площадку. На первом снимке приложение предлагает проверить касания; на втором счётчик показывает **31 нажатие**, а в кадре появилась жёлтая точка. Для первого дубля — вполне себе действие.
 
 ### Что видно на экране
 
 - **NeedleFactory — Stage 0 / technical boot**
 - **Renderer and font ready** — сообщение о готовности рендера и шрифта.
-- **Press anywhere to test input** — предложение проверить касания.
+- **Press anywhere to test input** — предложение проверить касания на первом снимке.
+- **Presses: 31; At: 107, 214** и жёлтая точка — состояние ввода на втором снимке.
 - **Pauses: 0; Resumes: 0** — счётчики пауз и возобновлений.
 - **FPS: 121; Frame: 8 ms avg** — показания на момент снимка, не результат длительного бенчмарка.
 - **Viewport: 1080 × 2199 px** — значение, отображённое приложением.
@@ -33,21 +34,25 @@
 
 ### Исходный материал
 
-Скриншот предоставлен автором в переписке 2026-10-13.
+<div class="screenshot-gallery"><figure class="screenshot portrait"><a href="../assets/screenshots/001-stage0-start.jpg" aria-label="Открыть исходный скриншот"><img src="../assets/screenshots/001-stage0-start.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="Первый экран NeedleFactory: Stage 0, Renderer and font ready, приглашение проверить касания, версия 0.0.1 / debug."></a><figcaption>С этого всё началось: игры ещё нет, зато Renderer and font ready. Шрифт вышел на площадку первым.</figcaption></figure>
+<figure class="screenshot portrait"><a href="../assets/screenshots/001-stage0-input.jpg" aria-label="Открыть исходный скриншот"><img src="../assets/screenshots/001-stage0-input.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="Проверка касаний в NeedleFactory Stage 0: Presses: 31, At: 107, 214 и жёлтая точка на экране."></a><figcaption>Уже 31 нажатие и жёлтая точка в кадре. Мой первый интерактивный спецэффект — пока без иголки.</figcaption></figure></div>
+
+Обе присланные мной копии сохранены без обрезки и ретуши. Их размер после передачи через Telegram — **591 × 1280 px**; сведения галереи выше относятся к исходному файлу. Точное время второго снимка отдельно не установлено.
 
 ---
 
 ## English
 
-**Status:** first screenshot, Stage 0 technical boot.
+**Status:** first two screenshots, Stage 0 technical boot.
 
-This is the actual first screenshot of NeedleFactory. There is no gameplay field yet: the screen is for checking application startup, text rendering, and input handling.
+My NeedleFactory started with these two screens. No needle or straw yet, but the font had already arrived on set. The first screenshot asks me to test touch input; the second shows **31 presses** and a yellow dot in the frame. A respectable amount of action for a first take.
 
 ### Visible details
 
 - **NeedleFactory — Stage 0 / technical boot**
 - **Renderer and font ready** — renderer/font readiness message.
-- **Press anywhere to test input** — prompt to test touch input.
+- **Press anywhere to test input** — touch input prompt in the first screenshot.
+- **Presses: 31; At: 107, 214** and a yellow dot — input state in the second screenshot.
 - **Pauses: 0; Resumes: 0** — pause/resume counters.
 - **FPS: 121; Frame: 8 ms avg** — snapshot readings, not a sustained benchmark.
 - **Viewport: 1080 × 2199 px** — value displayed by the application.
@@ -67,4 +72,7 @@ The first documented stage is a technical boot test before gameplay was introduc
 
 ### Source material
 
-Screenshot supplied by the creator in conversation on 2026-10-13.
+<div class="screenshot-gallery"><figure class="screenshot portrait"><a href="../assets/screenshots/001-stage0-start.jpg" aria-label="Open original screenshot"><img src="../assets/screenshots/001-stage0-start.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="First NeedleFactory screen: Stage 0, Renderer and font ready, touch input prompt, version 0.0.1 / debug."></a><figcaption>Where it all began: no game yet, but Renderer and font ready. The font was the first to arrive on set.</figcaption></figure>
+<figure class="screenshot portrait"><a href="../assets/screenshots/001-stage0-input.jpg" aria-label="Open original screenshot"><img src="../assets/screenshots/001-stage0-input.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="NeedleFactory Stage 0 input check: Presses: 31, At: 107, 214 and a yellow dot on screen."></a><figcaption>31 presses and a yellow dot in the frame. My first interactive special effect — still no needle.</figcaption></figure></div>
+
+Both copies I supplied are stored without cropping or retouching. Their dimensions after transfer through Telegram are **591 × 1280 px**; the Gallery details above refer to the original file. The exact time of the second screenshot has not been separately confirmed.
