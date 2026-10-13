@@ -17,9 +17,9 @@ Chronological notes on NeedleFactory — with a touch of self-deprecating humor 
 
 ## Страницы сайта / Website pages
 
-Записи 001–003 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
+Записи 001–004 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
 
-Entries 001–003 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
+Entries 001–004 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
 
 ## Шаблон / Template
 

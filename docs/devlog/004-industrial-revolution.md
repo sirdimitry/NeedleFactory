@@ -19,7 +19,7 @@
 
 **Вывод дня:** хотел искать иголку в стоге сена, а теперь, кажется, придётся разбираться ещё и в промышленной логистике.
 
-*Скриншот предоставлен автором; время записи указано со слов автора.*
+<figure class="screenshot portrait"><a href="../assets/screenshots/004-automation-line.jpg" aria-label="Открыть скриншот"><img src="../assets/screenshots/004-automation-line.jpg" width="1080" height="2340" loading="lazy" decoding="async" alt="Ранний прототип автоматической линии NeedleFactory: вибростол, конвейер, магнит, буфер и упаковщик; Batch 1, Recovered 1, Missed 0, Packaged 0."></a><figcaption>Мой первый завод: одна иголка уже найдена, упаковка ещё впереди. Солома тем временем осваивает промышленную логистику.</figcaption></figure>
 
 ---
 
@@ -39,4 +39,4 @@ At least there's some actual mechanization now. As for the conveyor looking like
 
 **Today's takeaway:** I wanted to find a needle in a haystack. Somehow, I ended up needing to learn industrial logistics.
 
-*Screenshot supplied by the creator; entry time provided by the creator.*
+<figure class="screenshot portrait"><a href="../assets/screenshots/004-automation-line.jpg" aria-label="Open screenshot"><img src="../assets/screenshots/004-automation-line.jpg" width="1080" height="2340" loading="lazy" decoding="async" alt="Early NeedleFactory automation prototype: vibration table, conveyor, magnet, buffer and packer; Batch 1, Recovered 1, Missed 0, Packaged 0."></a><figcaption>My first factory: one needle recovered, packaging still ahead. Meanwhile, the straw is learning industrial logistics.</figcaption></figure>
