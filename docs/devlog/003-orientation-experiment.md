@@ -9,7 +9,7 @@
 
 **Статус:** ранняя доработка игрового прототипа, эксперимент с ориентацией.
 
-Я режиссёр монтажа, а не профессиональный программист. Поэтому в NeedleFactory я выступаю как вайбкодер, энтузиаст нейросетей и человек, который привык, что если что-то не помещается в кадр, это можно поправить на монтаже. С программированием, как выяснилось, не всегда так просто.
+Я специалист по видеопроизводству с опытом более 25 лет, а не профессиональный программист. Поэтому в NeedleFactory я выступаю как вайбкодер, энтузиаст нейросетей и человек, который привык, что если что-то не помещается в кадр, это можно поправить на монтаже. С программированием, как выяснилось, не всегда так просто.
 
 На этом этапе NeedleFactory уже стала больше похожа на игру: среди деревянных элементов соломы видна металлическая иголка, работает отображение счётчика находок, а на одном из снимков появилась кнопка **Next pile**.
 
@@ -38,7 +38,7 @@
 
 **Status:** early gameplay iteration and orientation experiment.
 
-I'm a video editor and editing director, not a professional programmer. On NeedleFactory, I'm a vibe coder, an AI enthusiast, and someone used to fixing things in the edit when they don't fit the frame. As it turns out, software doesn't always cooperate quite so easily.
+I'm a video production professional with over 25 years of experience, not a professional programmer. On NeedleFactory, I'm a vibe coder, an AI enthusiast, and someone used to fixing things in the edit when they don't fit the frame. As it turns out, software doesn't always cooperate quite so easily.
 
 By this point, NeedleFactory was starting to look like an actual game. A metallic needle was visible among the straw-like wooden pieces, a found counter was on screen, and one screenshot showed a **Next pile** button.
 
