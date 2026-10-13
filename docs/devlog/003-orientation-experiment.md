@@ -1,8 +1,5 @@
 # 003 — Портретная ориентация в альбомной рамке / Portrait Mode in a Landscape Frame
 
-> **Дата сборки и снимков:** не установлена; материалы предоставлены 2026-10-13.  
-> **Build and screenshot dates:** unconfirmed; materials supplied on 2026-10-13.
-
 ## Русский
 
 *Или как заставить игру выглядеть вертикальной, не сделав её вертикальной.*
@@ -30,8 +27,6 @@
 
 <figure class="screenshot landscape"><a href="../assets/screenshots/003-orientation-landscape.jpg" aria-label="Открыть исходный скриншот"><img src="../assets/screenshots/003-orientation-landscape.jpg" width="1280" height="591" loading="lazy" decoding="async" alt="Альбомный экран раннего NeedleFactory: узкое вертикальное поле по центру, широкие чёрные поля, Found: 10 и кнопка Next pile."></a><figcaption>Повернул телефон — получил вертикальную игру с местом для титров по бокам. Found: 10, а адаптация ещё в поиске.</figcaption></figure>
 <figure class="screenshot portrait"><a href="../assets/screenshots/003-orientation-portrait.jpg" aria-label="Открыть исходный скриншот"><img src="../assets/screenshots/003-orientation-portrait.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="Вертикальный экран раннего NeedleFactory: иголка видна среди деревянных элементов, Found: 0, 100% visible и 2 touches."></a><figcaption>В вертикальном кадре иголка уже видна: 100% visible, но Found: 0. В кадр попала — в счётчик пока нет.</figcaption></figure>
-
-Мои скриншоты сохранены без обрезки и ретуши. Пустые поля — часть самого эксперимента; убирать их на монтаже было бы нечестно.
 
 ---
 
@@ -62,5 +57,3 @@ It almost looked intentional. It wasn't: **proper landscape adaptation was not w
 
 <figure class="screenshot landscape"><a href="../assets/screenshots/003-orientation-landscape.jpg" aria-label="Open original screenshot"><img src="../assets/screenshots/003-orientation-landscape.jpg" width="1280" height="591" loading="lazy" decoding="async" alt="Early NeedleFactory in landscape: narrow portrait playfield in the center, wide black margins, Found: 10 and a Next pile button."></a><figcaption>I rotated the phone and got a portrait game with room for credits on both sides. Found: 10; the responsive layout was still missing.</figcaption></figure>
 <figure class="screenshot portrait"><a href="../assets/screenshots/003-orientation-portrait.jpg" aria-label="Open original screenshot"><img src="../assets/screenshots/003-orientation-portrait.jpg" width="591" height="1280" loading="lazy" decoding="async" alt="Early NeedleFactory in portrait: needle visible among wooden pieces, Found: 0, 100% visible and 2 touches."></a><figcaption>The needle is visible in portrait: 100% visible, but Found: 0. It made it into the frame, but not the counter yet.</figcaption></figure>
-
-My screenshots are stored without cropping or retouching. The empty margins are part of the experiment; cutting them out in the edit would be cheating.

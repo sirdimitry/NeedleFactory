@@ -1,8 +1,5 @@
 # 002 — Ранний игровой прототип / Early Gameplay Prototype
 
-> Дата тестового запуска неизвестна. Запись добавлена 2026-10-13.  
-> Test launch date unknown. Entry added on 2026-10-13.
-
 ## Русский
 
 **Статус:** архивный скриншот раннего прототипа.
@@ -20,13 +17,11 @@
 
 ### Историческое значение
 
-Это первый показанный игровой экран после технического запуска. На данном этапе документируется видимый интерфейс, а не делаются выводы о реализации физики, успешности поиска иглы или стабильности производительности.
+После технического экрана у меня наконец появилось игровое поле. Теперь можно было разгребать солому — хотя внешне она пока больше напоминала деревянные палочки. Иголку ещё нужно найти, но занятие для пальцев уже есть.
 
-### Исходный материал
+### Скриншоты
 
 <figure class="screenshot portrait"><a href="../progress/stage1-portrait.png" aria-label="Открыть исходный скриншот"><img src="../progress/stage1-portrait.png" width="1080" height="2340" loading="lazy" decoding="async" alt="Ранний прототип NeedleFactory: вертикальное поле с короткими деревянными элементами, Found: 0 и отладочные показатели."></a><figcaption>Моя первая солома: пока деревянные палочки, Found: 0. Иголку ещё предстоит найти.</figcaption></figure>
-
-Скриншот предоставлен автором в переписке 2026-10-13; оригинал сохранён в `docs/progress/stage1-portrait.png`.
 
 ---
 
@@ -47,10 +42,8 @@ The second screenshot in the NeedleFactory chronology: an early gameplay prototy
 
 ### Historical significance
 
-This is the first shown gameplay screen after the technical boot. The entry documents what is visible without making unsupported claims about physics implementation, successful needle detection, or sustained performance.
+After the technical screen, I finally had a playfield. Now I could sweep the straw, although it still looked more like wooden sticks. The needle still needed finding, but at least my fingers had something to do.
 
-### Source material
+### Screenshots
 
 <figure class="screenshot portrait"><a href="../progress/stage1-portrait.png" aria-label="Open original screenshot"><img src="../progress/stage1-portrait.png" width="1080" height="2340" loading="lazy" decoding="async" alt="Early NeedleFactory prototype: portrait playfield with short wooden pieces, Found: 0 and debug readings."></a><figcaption>My first straw: wooden sticks for now, Found: 0. The needle is still waiting to be found.</figcaption></figure>
-
-The screenshot was supplied by the creator in a conversation on 2026-10-13; the original is stored in `docs/progress/stage1-portrait.png`.
