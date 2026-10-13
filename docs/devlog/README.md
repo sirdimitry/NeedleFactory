@@ -13,13 +13,14 @@ Chronological notes on NeedleFactory — with a touch of self-deprecating humor 
 - [001 — Технический запуск Stage 0 / Stage 0 technical boot](001-first-test-launch.md)
 - [002 — Ранний игровой прототип / Early gameplay prototype](002-early-gameplay-prototype.md)
 - [003 — Портретная ориентация в альбомной рамке / Portrait in a landscape frame](003-orientation-experiment.md)
+- [005 — Позвал ИИ в художественный отдел / I Called AI into the Art Department](005-ai-art-direction.md)
 - [2026-10-13 — Начало дневника / Journal kickoff](2026-10-13-kickoff.md)
 
 ## Страницы сайта / Website pages
 
-Записи 001–004 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
+Записи 001–005 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
 
-Entries 001–004 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
+Entries 001–005 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
 
 ## Шаблон / Template
 
