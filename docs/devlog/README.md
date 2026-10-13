@@ -6,6 +6,8 @@ Chronological notes on the development of NeedleFactory.
 
 ## Записи / Entries
 
+- [001 — Технический запуск Stage 0 / Stage 0 technical boot](001-first-test-launch.md)
+- [002 — Ранний игровой прототип / Early gameplay prototype](002-early-gameplay-prototype.md)
 - [2026-10-13 — Начало дневника / Journal kickoff](2026-10-13-kickoff.md)
 
 ## Шаблон / Template
