@@ -1,52 +1,62 @@
-# 001 — Первый тестовый запуск / First Test Launch
+# 001 — Технический запуск Stage 0 / Stage 0 Technical Boot
 
-> Дата тестового запуска неизвестна. Запись добавлена 2026-10-13.  
-> Test launch date unknown. Entry added on 2026-10-13.
+> Дата снимка неизвестна; запись исправлена 2026-10-13.  
+> Screenshot date unknown; entry corrected on 2026-10-13.
 
 ## Русский
 
-**Статус:** архивный скриншот раннего прототипа.
+**Статус:** первый скриншот, техническая проверка Stage 0.
 
-Первый сохранившийся скриншот тестового запуска игры NeedleFactory, с которого автор начинает документировать историю разработки.
+Это настоящий первый скриншот проекта NeedleFactory. На нём ещё нет игрового поля: показан технический экран проверки запуска, отображения текста и обработки ввода.
 
 ### Что видно на экране
 
-- Вертикальный экран Android с названием NeedleFactory.
-- Инструкции: «Sweep the straw with your finger. Tap the needle when it is uncovered.»
-- Прямоугольное тёмное игровое поле с отдельными короткими деревянными/соломенными элементами.
-- Счётчик находок: **Found: 0**.
-- Под полем отладочная информация: **Seed 42**, **121 FPS**, **8 ms**, **66 bodies**, **0% visible**, **33s**, **0 touches**, **0.0m drag**.
-- Подсказка внизу: «Move gently. Make room to see.»
+- **NeedleFactory — Stage 0 / technical boot**
+- **Renderer and font ready** — сообщение о готовности рендера и шрифта.
+- **Press anywhere to test input** — предложение проверить касания.
+- **Pauses: 0; Resumes: 0** — счётчики пауз и возобновлений.
+- **FPS: 121; Frame: 8 ms avg** — показания на момент снимка, не результат длительного бенчмарка.
+- **Viewport: 1080 × 2199 px** — значение, отображённое приложением.
+- **0.0.1 / debug** — подпись версии и режима.
+- Внизу: **Tap / click anywhere** и **Rotate, resize, leave and return** — подсказки к техническим тестам.
+- На экране видны светлые полосы сверху и снизу; это наблюдение по изображению, без установленной причины.
 
 ### Историческое значение
 
-Это отправная точка визуальной истории проекта. На данном этапе документируется видимый интерфейс, а не делаются выводы о реализации физики, успешности поиска иглы или стабильности производительности.
+Первый зафиксированный этап — техническая проверка приложения до появления игрового процесса. Скриншот не доказывает, что все предложенные проверки ввода, поворота и возобновления были успешно выполнены.
+
+**Следующая запись:** [002 — Ранний игровой прототип](002-early-gameplay-prototype.md).
 
 ### Исходный материал
 
-Скриншот предоставлен автором в переписке 2026-10-13. Исходное изображение ещё не загружено в репозиторий; после размещения здесь будет добавлена ссылка.
+Скриншот предоставлен автором в переписке 2026-10-13. Изображение ещё не загружено в GitHub.
 
 ---
 
 ## English
 
-**Status:** archived screenshot of an early prototype.
+**Status:** first screenshot, Stage 0 technical boot.
 
-The first preserved screenshot of a NeedleFactory test launch, used by the creator as the starting point for documenting the game's development history.
+This is the actual first screenshot of NeedleFactory. There is no gameplay field yet: the screen is for checking application startup, text rendering, and input handling.
 
-### What is visible
+### Visible details
 
-- Portrait Android screen showing the NeedleFactory title.
-- Instructions: “Sweep the straw with your finger. Tap the needle when it is uncovered.”
-- A dark rectangular playfield containing separate short straw-like wooden pieces.
-- Found counter: **Found: 0**.
-- Debug readout: **Seed 42**, **121 FPS**, **8 ms**, **66 bodies**, **0% visible**, **33s**, **0 touches**, **0.0m drag**.
-- Bottom hint: “Move gently. Make room to see.”
+- **NeedleFactory — Stage 0 / technical boot**
+- **Renderer and font ready** — renderer/font readiness message.
+- **Press anywhere to test input** — prompt to test touch input.
+- **Pauses: 0; Resumes: 0** — pause/resume counters.
+- **FPS: 121; Frame: 8 ms avg** — snapshot readings, not a sustained benchmark.
+- **Viewport: 1080 × 2199 px** — value displayed by the application.
+- **0.0.1 / debug** — displayed version and mode.
+- Bottom instructions: **Tap / click anywhere** and **Rotate, resize, leave and return**.
+- Light bands are visible at the top and bottom; their cause is not established.
 
 ### Historical significance
 
-This is the starting point of the project's visual history. The entry documents what is visible without making unsupported claims about physics implementation, successful needle detection, or sustained performance.
+The first documented stage is a technical boot test before gameplay was introduced. The screenshot alone does not confirm that input, rotation, or resume tests were successfully completed.
+
+**Next entry:** [002 — Early gameplay prototype](002-early-gameplay-prototype.md).
 
 ### Source material
 
-The screenshot was supplied by the creator in a conversation on 2026-10-13. The original image has not yet been uploaded to the repository; a link will be added after upload.
+Screenshot supplied by the creator in conversation on 2026-10-13. The image has not yet been uploaded to GitHub.
