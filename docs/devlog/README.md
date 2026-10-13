@@ -4,12 +4,20 @@
 
 Chronological notes on NeedleFactory — with a touch of self-deprecating humor from its creator, a video production professional, vibe coder, and AI enthusiast.
 
+[Открыть сайт дневника / Open the devlog website](../index.html)
+
 ## Записи / Entries
 
 - [001 — Технический запуск Stage 0 / Stage 0 technical boot](001-first-test-launch.md)
 - [002 — Ранний игровой прототип / Early gameplay prototype](002-early-gameplay-prototype.md)
 - [003 — Портретная ориентация в альбомной рамке / Portrait in a landscape frame](003-orientation-experiment.md)
 - [2026-10-13 — Начало дневника / Journal kickoff](2026-10-13-kickoff.md)
+
+## Страницы сайта / Website pages
+
+Записи 001–003 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
+
+Entries 001–003 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
 
 ## Шаблон / Template
 

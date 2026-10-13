@@ -24,7 +24,9 @@
 
 ### Исходный материал
 
-Скриншот предоставлен автором в переписке 2026-10-13. Исходное изображение ещё не загружено в репозиторий; после размещения здесь будет добавлена ссылка.
+<figure class="screenshot portrait"><a href="../progress/stage1-portrait.png" aria-label="Открыть исходный скриншот"><img src="../progress/stage1-portrait.png" width="1080" height="2340" loading="lazy" decoding="async" alt="Ранний прототип NeedleFactory: вертикальное поле с короткими деревянными элементами, Found: 0 и отладочные показатели."></a><figcaption>Моя первая солома: пока деревянные палочки, Found: 0. Иголку ещё предстоит найти.</figcaption></figure>
+
+Скриншот предоставлен автором в переписке 2026-10-13; оригинал сохранён в `docs/progress/stage1-portrait.png`.
 
 ---
 
@@ -49,4 +51,6 @@ This is the first shown gameplay screen after the technical boot. The entry docu
 
 ### Source material
 
-The screenshot was supplied by the creator in a conversation on 2026-10-13. The original image has not yet been uploaded to the repository; a link will be added after upload.
+<figure class="screenshot portrait"><a href="../progress/stage1-portrait.png" aria-label="Open original screenshot"><img src="../progress/stage1-portrait.png" width="1080" height="2340" loading="lazy" decoding="async" alt="Early NeedleFactory prototype: portrait playfield with short wooden pieces, Found: 0 and debug readings."></a><figcaption>My first straw: wooden sticks for now, Found: 0. The needle is still waiting to be found.</figcaption></figure>
+
+The screenshot was supplied by the creator in a conversation on 2026-10-13; the original is stored in `docs/progress/stage1-portrait.png`.

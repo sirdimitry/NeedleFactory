@@ -33,7 +33,7 @@
 
 ### Исходный материал
 
-Скриншот предоставлен автором в переписке 2026-10-13. Изображение ещё не загружено в GitHub.
+Скриншот предоставлен автором в переписке 2026-10-13.
 
 ---
 
@@ -67,4 +67,4 @@ The first documented stage is a technical boot test before gameplay was introduc
 
 ### Source material
 
-Screenshot supplied by the creator in conversation on 2026-10-13. The image has not yet been uploaded to GitHub.
+Screenshot supplied by the creator in conversation on 2026-10-13.

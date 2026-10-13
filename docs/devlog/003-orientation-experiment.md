@@ -28,7 +28,7 @@
 
 ### Иллюстрации
 
-Два исходных скриншота переданы автором в переписке. В GitHub пока сохранено описание; сами изображения ещё не загружены.
+Два исходных скриншота переданы автором в переписке 2026-10-13.
 
 ---
 
@@ -57,4 +57,4 @@ It almost looked intentional. It wasn't: **proper landscape adaptation was not w
 
 ### Images
 
-Both original screenshots were supplied by the creator in conversation. The descriptions are now in GitHub; the images themselves have not yet been uploaded.
+Both original screenshots were supplied by the creator in conversation on 2026-10-13.

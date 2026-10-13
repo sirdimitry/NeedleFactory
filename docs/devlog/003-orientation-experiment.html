@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>003 — Портретная ориентация в альбомной рамке — NeedleFactory</title><link rel="stylesheet" href="../assets/devlog.css"></head>
+<body data-ru-title="003 — Портретная ориентация в альбомной рамке — NeedleFactory" data-en-title="003 — Portrait Mode in a Landscape Frame — NeedleFactory"><header><nav class="lang" aria-label="Language"><button type="button" data-setlang="ru" aria-pressed="true">Русский</button><button type="button" data-setlang="en" aria-pressed="false">English</button></nav><a class="back" href="../index.html"><span data-lang="ru">← Дневник одного вайбкодера</span><span data-lang="en" hidden>← Diary of a Vibe Coder</span></a></header>
+<main class="post"><article data-lang="ru"><h1>003 — Портретная ориентация в альбомной рамке</h1><blockquote>
+<p><strong>Дата сборки и снимков:</strong> не установлена; материалы предоставлены 2026-10-13.  </p>
+</blockquote>
+<p><em>Или как заставить игру выглядеть вертикальной, не сделав её вертикальной.</em></p>
+<p><strong>Статус:</strong> ранняя доработка игрового прототипа, эксперимент с ориентацией.</p>
+<p>Я специалист по видеопроизводству с опытом более 25 лет, а не профессиональный программист. Поэтому в NeedleFactory я выступаю как вайбкодер, энтузиаст нейросетей и человек, который привык, что если что-то не помещается в кадр, это можно поправить на монтаже. С программированием, как выяснилось, не всегда так просто.</p>
+<p>На этом этапе NeedleFactory уже стала больше похожа на игру: среди деревянных элементов соломы видна металлическая иголка, работает отображение счётчика находок, а на одном из снимков появилась кнопка <strong>Next pile</strong>.</p>
+<h3>Два снимка — два состояния</h3>
+<ol>
+<li><strong>Вертикальный экран.</strong> На поле видна иголка; счётчик <strong>Found: 0</strong>, отладочные показатели <strong>121 FPS</strong>, <strong>8 ms</strong>, <strong>66 bodies</strong>, <strong>100% visible</strong>, <strong>2 touches</strong>, <strong>5.4 m drag</strong>. Это значения конкретного кадра, а не итог тестирования.</li>
+<li><strong>Альбомный экран.</strong> Вертикальное игровое поле расположилось узкой колонкой посередине широкого экрана, оставив огромные пустые пространства по бокам. Счётчик показывает <strong>Found: 10</strong>, появилась кнопка <strong>Next pile</strong>; в отладке видны <strong>121 FPS</strong>, <strong>8 ms</strong>, <strong>66 bodies</strong>, <strong>66% visible</strong>, <strong>5 touches</strong>, <strong>22.3 m drag</strong>.</li>
+</ol>
+<h3>Маленькое открытие</h3>
+<p>Я хотел, чтобы игра нормально работала в альбомной ориентации. Вместо этого вертикальная версия просто переехала в центр горизонтального экрана. По бокам осталось столько свободного места, что туда можно было бы поставить титры, список съёмочной группы и ещё пару рекламных интеграций.</p>
+<p>Выглядело почти как дизайнерское решение. Но нет: <strong>полноценная адаптация под альбомную ориентацию тогда не работала</strong>.</p>
+<p><strong>Вывод:</strong> повернуть экран и адаптировать интерфейс — не одно и то же. Зато иголка уже была на месте. Для начала неплохо!</p>
+<h3>Иллюстрации</h3>
+<p>Два исходных скриншота переданы автором в переписке 2026-10-13.</p>
+</article><article data-lang="en" hidden><h1>003 — Portrait Mode in a Landscape Frame</h1><blockquote>
+<p><strong>Build and screenshot dates:</strong> unconfirmed; materials supplied on 2026-10-13.</p>
+</blockquote>
+<p><em>Or how to make a game look portrait-oriented without actually making it work in landscape.</em></p>
+<p><strong>Status:</strong> early gameplay iteration and orientation experiment.</p>
+<p>I&#39;m a video production professional with over 25 years of experience, not a professional programmer. On NeedleFactory, I&#39;m a vibe coder, an AI enthusiast, and someone used to fixing things in the edit when they don&#39;t fit the frame. As it turns out, software doesn&#39;t always cooperate quite so easily.</p>
+<p>By this point, NeedleFactory was starting to look like an actual game. A metallic needle was visible among the straw-like wooden pieces, a found counter was on screen, and one screenshot showed a <strong>Next pile</strong> button.</p>
+<h3>Two screenshots, two states</h3>
+<ol>
+<li><strong>Portrait screen.</strong> A needle is visible on the playfield. Debug values include <strong>Found: 0</strong>, <strong>121 FPS</strong>, <strong>8 ms</strong>, <strong>66 bodies</strong>, <strong>100% visible</strong>, <strong>2 touches</strong>, and <strong>5.4 m drag</strong>. These are single-frame observations, not benchmark results.</li>
+<li><strong>Landscape screen.</strong> The portrait playfield appears as a narrow column in the middle of a wide display, with enormous empty margins. The counter reads <strong>Found: 10</strong> and a <strong>Next pile</strong> button is visible. Debug values include <strong>121 FPS</strong>, <strong>8 ms</strong>, <strong>66 bodies</strong>, <strong>66% visible</strong>, <strong>5 touches</strong>, and <strong>22.3 m drag</strong>.</li>
+</ol>
+<h3>A small discovery</h3>
+<p>I wanted the game to work properly in landscape. Instead, the portrait layout simply moved to the center of the horizontal screen. There was enough empty space on either side for end credits, the entire production crew, and a couple of sponsor messages.</p>
+<p>It almost looked intentional. It wasn&#39;t: <strong>proper landscape adaptation was not working yet</strong>.</p>
+<p><strong>Takeaway:</strong> rotating a screen and adapting a layout are two very different things. At least the needle was already there. That&#39;s a start!</p>
+<h3>Images</h3>
+<p>Both original screenshots were supplied by the creator in conversation on 2026-10-13.</p>
+</article></main>
+<footer><p>NeedleFactory · <a href="https://github.com/sirdimitry/NeedleFactory">GitHub</a> · RU / EN</p></footer><script src="../assets/devlog.js" defer></script></body></html>
