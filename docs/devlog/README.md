@@ -8,6 +8,8 @@ Chronological notes on NeedleFactory — with a touch of self-deprecating humor 
 
 ## Записи / Entries
 
+- [004 — Я хотел найти иголку. В итоге построил завод / I Built a Factory Instead](004-industrial-revolution.md)
+
 - [001 — Технический запуск Stage 0 / Stage 0 technical boot](001-first-test-launch.md)
 - [002 — Ранний игровой прототип / Early gameplay prototype](002-early-gameplay-prototype.md)
 - [003 — Портретная ориентация в альбомной рамке / Portrait in a landscape frame](003-orientation-experiment.md)
