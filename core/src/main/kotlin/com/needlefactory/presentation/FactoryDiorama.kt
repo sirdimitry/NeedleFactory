@@ -10,9 +10,11 @@ internal class FactoryDiorama(shapes:ShapeRenderer) {
     private val d=FactoryDrawing(shapes)
     private val s=shapes
     private val p=Vector2()
+    private val products=ProductDiorama(shapes)
     fun draw(l:FactoryLayout,session:FactorySession) {
         val u=l.unit
         floor(l)
+        if(session.config.manualProducts) { if(!session.config.pitReceiver) table(l,session); products.draw(l,session,alpha); return }
         // Common support frame ties the belt and elevated sorting branch together.
         belt(l,session)
         apron(l,session)
@@ -29,15 +31,16 @@ internal class FactoryDiorama(shapes:ShapeRenderer) {
         buffer(l,session)
         packer(l,session)
         bin(l.output.x,l.output.y,53*u,40*u,u,false,0)
-        val n=session.batch.needle
-        if(n.route==Route.EJECT || n.route==Route.OUTPUT) {
+        for(n in session.batch.needles) if(n.route==Route.EJECT || n.route==Route.OUTPUT) {
             val t=if(n.route==Route.OUTPUT) 1f else n.previousProgress+(n.progress-n.previousProgress)*alpha
             p.set(l.packer).lerp(l.output,t)
-            parcel(p.x,p.y,u)
+            parcel(p.x,p.y + if(n.route==Route.OUTPUT) session.batch.needles.indexOf(n)*4*u else 0f,u)
         }
     }
     /** Raised housings occlude material travelling underneath the gantry. */
-    fun overhead(l:FactoryLayout,session:FactorySession) = separator(l,session)
+    fun overhead(l:FactoryLayout,session:FactorySession) {
+        if(session.config.manualProducts) products.overhead(l,session) else separator(l,session)
+    }
     var alpha=1f
     private fun floor(l:FactoryLayout) {
         val f=l.floor
@@ -100,6 +103,7 @@ internal class FactoryDiorama(shapes:ShapeRenderer) {
         // Right rim is intentionally open along the full receiving apron.
         d.line(t.x-4*u,t.y+4*u,t.x-4*u,t.y+t.height-4*u,2*u,FactoryPalette.top)
         for(i in 0..1) for(j in 0..1) d.bolt(t.x-5*u+i*(t.width+10*u),t.y-3*u+j*(t.height+6*u),1.6f*u)
+        if(session.config.manualProducts) return
         // Eccentric drive: round motor housing, mounting ears, spindle and moving weight.
         val mx=t.x+24*u; val my=t.y-17*u
         d.round(mx-18*u,my-9*u,36*u,18*u,5*u,FactoryPalette.front)
@@ -184,7 +188,7 @@ internal class FactoryDiorama(shapes:ShapeRenderer) {
         // Pole shoes straddle a visible dark aperture over the actual capture point.
         d.round(x-24*u,y-7*u,10*u,13*u,3*u,FactoryPalette.steel)
         d.round(x+14*u,y-7*u,10*u,13*u,3*u,FactoryPalette.steel)
-        val n=session.batch.needle
+        val n=session.batch.needles.firstOrNull { it.route==Route.CAPTURE } ?: session.batch.needle
         val lift=if(n.route==Route.CAPTURE) (n.previousProgress+(n.progress-n.previousProgress)*alpha).coerceIn(0f,1f) else 0f
         p.set(l.magnet).lerp(l.capture,lift*lift*(3-2*lift))
         // Guide carriage travels with capture; rails and discharge saddle stay fixed.
@@ -262,7 +266,7 @@ internal class FactoryDiorama(shapes:ShapeRenderer) {
         d.line(x-21*u,y+14*u,x-12*u,y+10*u,6*u,FactoryPalette.carton)
         d.line(x-33*u,y-23*u,x+33*u,y-23*u,2*u,FactoryPalette.front)
         d.bolt(x-30*u,y-23*u,1.5f*u); d.bolt(x+30*u,y-23*u,1.5f*u)
-        val n=session.batch.needle
+        val n=session.batch.needles.firstOrNull { it.route==Route.PACKING } ?: session.batch.needle
         val jaw=if(n.route==Route.PACKING) sin(((n.progress-.45f)/.55f).coerceIn(0f,1f)*PI.toFloat())*7*u else 0f
         // Open jaws clear the horizontal exit; they close only after the infeed/align phase.
         d.round(x-27*u,y-20*u+jaw,54*u,6*u,2*u,FactoryPalette.steel)

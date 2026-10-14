@@ -30,12 +30,13 @@ android {
         applicationId = "com.needlefactory.android"
         minSdk = 23
         targetSdk = 36
-        versionCode = 1
+        versionCode = 2
         versionName = project.version.toString()
     }
     buildFeatures { buildConfig = true }
     sourceSets["main"].apply {
         assets.srcDir(rootProject.file("assets"))
+        assets.srcDir(rootProject.file("core/src/main/resources"))
         jniLibs.srcDir(nativeOutput)
     }
     compileOptions {

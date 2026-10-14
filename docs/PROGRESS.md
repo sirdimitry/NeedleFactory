@@ -9,7 +9,7 @@ the accepted playable code, independently of later documentation commits.
 - Stage 0 — **ACCEPTED**
 - Stage 1 — **ACCEPTED**
 - Stage 2 — **ACCEPTED**
-- Stage 3 — **NOT STARTED / awaiting owner authorization**
+- Stage 3 — **CURRENT / AUTHORIZED — first playable slice; not accepted**
 
 | Milestone | Accepted | Immutable tag | Accepted commit |
 | --- | --- | --- | --- |
@@ -157,3 +157,12 @@ Substitute `v0.0-stage0` or `v0.1-stage1` and a distinct directory for earlier
 checkpoints. Follow the README/toolchain instructions **at that tag** to build.
 This keeps the current main checkout intact; no historic checkout/build was
 performed while creating this history.
+## Stage 3 playtest snapshot — 2026-10-14
+
+Owner explicitly authorized publication of v0.3.0-stage3-playtest.1 as a GitHub
+prerelease with debug APK. Current Russian title: Стог и сталь / NeedleFactory.
+Manual clump handling, three physical needles, paid tools/field automation,
+live workshop, saved progression, sound mixer and NF identity are available.
+Stage3 remains CURRENT / AUTHORIZED, not ACCEPTED / COMPLETED. Stage0–2 tags
+are immutable and unchanged. See STAGE_3_REPORT.md for pass-level verification
+and physical-review limitations. APK is a Release asset, never a git file.

@@ -94,6 +94,18 @@ The project milestone documents and `AGENTS.md` remain authoritative over any ex
 
 ## Project profiles
 
+### AUDIO_SOUND — owner authorized 2026-10-13
+
+Use with GAME_FEEL + UI_UX + QA_VERIFY + ANDROID_PLATFORM for the current Stage 3
+soundscape. Installed libgdx-audio-lifecycle guides preloading, short mono effects,
+streamed ambient and lifecycle/disposal. Installed audio-lens guides objective WAV
+checks after its self-test. Sound designer and mobile performance role lenses:
+event truth, no hidden-needle sonic hints, restrained mix, capped overlap,
+smooth machine loops, foreground-only playback, persisted mute settings.
+Owner authorized skills and local implementation, not paid cloud APIs/new runtime
+dependencies. See AUDIO_DESIGN.md; finish with Samsung listening review, no
+commit/push or Stage 3 acceptance.
+
 ### GAMEPLAY_CORE
 Use for rules, manual/automation progression, difficulty and player decisions.
 
@@ -216,7 +228,7 @@ Rules:
 - do not introduce Compose/MVI/DI simply because a source skill recommends it;
 - verify real-device behavior, not only emulator behavior.
 
-### ECONOMY_PROGRESSION — locked until the milestone allows it
+### ECONOMY_PROGRESSION — Stage 3 first playable slice authorized
 Use for costs, upgrades, unlock pacing, manual -> assisted -> automated progression and long-term balance.
 
 Primary inputs:
@@ -226,6 +238,9 @@ Primary inputs:
 - Economy Designer role lens.
 
 No economy work may leak into an earlier locked milestone.
+Owner approved `STAGE_3_DESIGN.md` and explicitly authorized the incremental
+first runtime slice in `STAGE_3.md`: 3 needles, early finish, credits/results,
+2–3 early manual-feed upgrades and versioned progression saves. Offline remains zero.
 
 ### SAVE_RELEASE — later
 Use when persistence/release work is explicitly authorized.
@@ -249,10 +264,28 @@ For any separately requested Stage 2 polish/regression review, default to:
 
 Add `PERFORMANCE` only when profiling or frame/thermal evidence is being evaluated.
 
-Do not activate `ECONOMY_PROGRESSION` yet.
+When maintaining accepted Stage 2, keep economy out of that historical scope.
 Owner-authorized exception (2026-10-05): `ECONOMY_PROGRESSION` may be used only
 to author/review `GAMEPLAY_ECONOMY_PROPOSAL.md`. This is preparatory design, not
 Stage 3 authorization; no economy/progression runtime is authorized by the note.
+
+## Stage 3 design-only routing
+
+Owner-authorized profiles: **GAMEPLAY_CORE + ECONOMY_PROGRESSION + GAME_FEEL +
+UI_UX + QA_VERIFY**. Apply Game Director/Systems Designer, Economy Designer,
+Senior Gameplay Designer, Game UI/UX Designer and QA/Balance Designer lenses.
+Deliver `STAGE_3_DESIGN.md` for owner review. Preserve accepted Stage 2 and existing
+proposals; no new plugins/services/dependencies, runtime implementation or
+automatic commit/push. Implementation requires separate owner approval.
+
+## Stage 3 current implementation routing
+
+The owner has now provided that separate approval. Use **GAMEPLAY_CORE +
+ECONOMY_PROGRESSION + GAME_FEEL + UI_UX + QA_VERIFY + ANDROID_PLATFORM +
+PERFORMANCE** for the first playable slice only. Apply gameplay/economy, Kotlin/
+libGDX/physics, technical art/UI, QA/balance and mobile performance role lenses.
+Do not add dependencies/services; stop for owner Samsung review, without
+commit/push, release/tag, completed status or automatic expansion to another pass.
 
 ## Owner visibility / change-control rule
 

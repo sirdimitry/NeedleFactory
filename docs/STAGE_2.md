@@ -1,7 +1,8 @@
 # Stage 2 — First Automation Line
 
 ## Authorization
-**Stages 0, 1 and 2 are accepted/completed. Stage 3 remains locked.**
+**Stages 0, 1 and 2 are accepted/completed.** Stage 3 was locked at this milestone's
+acceptance; its first slice now has separate owner authorization in `STAGE_3.md`.
 Owner accepted this Stage 2 iteration after physical Samsung SM-S938B testing on
 2026-10-05 and authorized its closing commit/push. The requirements below describe
 the accepted scope and remain regression constraints, not authorization for Stage 3.

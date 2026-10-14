@@ -5,6 +5,19 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class FactoryCanvasTest {
+    @Test fun `gesture margins keep Samsung modules usable and preserve scale across rotation`() {
+        val ps=SafeArea(top=96,bottom=45).withSideMargin(72)
+        val ls=SafeArea(left=96,bottom=45).withSideMargin(72)
+        assertEquals(72,ps.left); assertEquals(72,ps.right); assertEquals(96,ls.left)
+        val p=FactoryCanvas.forWindow(1080,2340,ps); val l=FactoryCanvas.forWindow(2340,1080,ls)
+        assertTrue(kotlin.math.abs(p.unitsPerPixel/l.unitsPerPixel-1)<.05f)
+        for(c in listOf(p,l)) {
+            val layout=FactoryLayout(c.width,c.height,true)
+            assertTrue(layout.table.x>=24f)
+            assertTrue(layout.productReceiver.x+layout.productReceiver.width<c.width)
+            assertTrue(layout.controls.all { it.x>=0 && it.x+it.width<=c.width })
+        }
+    }
     @Test fun `Samsung rotation keeps physical field needle straw and machine scale identical`() {
         val p=FactoryCanvas.forWindow(1080,2340,SafeArea(top=96,bottom=45))
         for(safe in listOf(SafeArea(left=96,right=45),SafeArea(top=96,bottom=45),SafeArea(right=96,bottom=45))) {
@@ -52,6 +65,28 @@ class FactoryCanvasTest {
             assertTrue(w.width>=813.99f)
             assertEquals(FactoryLayout(p.width,p.height).table.width/p.unitsPerPixel,
                 FactoryLayout(w.width,w.height).table.width/w.unitsPerPixel,.001f)
+        }
+    }
+    @Test fun `distant floor pit uses invertible rigid yard transforms without orientation zoom`() {
+        val portrait=FactoryCanvas.forWindow(1080,2340,SafeArea(top=96,bottom=45).withSideMargin(72))
+        val wide=FactoryCanvas.forWindow(2340,1080,SafeArea(top=96,bottom=45).withSideMargin(72))
+        for(c in listOf(portrait,wide)) {
+            val l=FactoryLayout(c.width,c.height,true,true)
+            val p=com.badlogic.gdx.math.Vector2(); val q=com.badlogic.gdx.math.Vector2()
+            for((x,y) in listOf(2f to 6f,1.35f to -11.6f,3.3f to -11.6f,7f to -4f)) {
+                l.yardPoint(x,y,p); l.yardCoordinates(p.x,p.y,q)
+                assertEquals(x,q.x,.0001f); assertEquals(y,q.y,.0001f)
+                assertTrue(l.yard.contains(p))
+            }
+            assertEquals(24.8f,l.materialScale,0f)
+            assertTrue(l.pitHole.x>=l.floor.x)
+            assertTrue(l.pitHole.y>=l.floor.y)
+            assertTrue(l.pitHole.x+l.pitHole.width<=l.floor.x+l.floor.width)
+            assertTrue(l.pitHole.y+l.pitHole.height<=l.floor.y+l.floor.height)
+            if(!l.landscape) {
+                assertTrue(l.pitHole.y<l.table.y-250f)
+                assertTrue(l.pitHole.x<l.floor.x+60)
+            }
         }
     }
 }

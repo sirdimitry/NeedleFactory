@@ -1,5 +1,15 @@
 # Agent Skill Plan
 
+## Owner-authorized audio skills (2026-10-13)
+
+- [libgdx-audio-lifecycle](https://github.com/kyu-n/gdx-claude-skills/tree/master/skills/libgdx-audio-lifecycle): Sound/Music, Android asset limits, load/dispose and lifecycle.
+- [audio-lens](https://github.com/bman654/audio-forge/tree/main/skills/audio-lens) (MIT): local WAV measurements and spectrograms; self-test first. Measurements do not replace listening.
+
+Installed in the owner's Codex skills directory, not vendored into game runtime.
+Use project AUDIO_SOUND profile and [AUDIO_DESIGN.md](AUDIO_DESIGN.md).
+Original assets are synthesized locally using Python standard library only.
+No external paid API, speech model, plugin runtime or audio framework is adopted.
+
 These are **reference skills**, not vendored runtime dependencies. Their licenses and applicability must be respected. Do not copy large third-party skill repositories into NeedleFactory unless explicitly approved.
 
 ## NeedleFactory curated routing layer
@@ -26,6 +36,8 @@ Purpose: HUD/menu state design, touch behavior, accessibility, responsive game U
 
 ### Game balance
 Source: `DSmereski/agent-skills — game-balance`.
+Verified reference path (2026-10-10):
+https://github.com/DSmereski/agent-skills/blob/main/skills/game-balance.md
 Purpose: tune measurable economy/progression targets with headless simulation rather than intuition alone.
 
 ## Tier B — Android architecture/testing references

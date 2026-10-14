@@ -43,10 +43,31 @@ true responsive rotation with retained state, and explicit owner acceptance.
 Exit gate passed by explicit owner acceptance. No Stage 3 implementation is
 authorized by this acceptance.
 
-## Stage 3 — Economy & progression [NEXT / NOT AUTHORIZED]
+## Stage 3 — Economy & progression [CURRENT / AUTHORIZED]
+
+Latest bounded owner-review pass2026-10-10: paid field automation (robot, fans,
+rotating dividers), immediate upgrades and confirmed scrolling workshop.
+Conveyors/processing postponed. Not Stage3 acceptance or a Stage4 editor.
+Current verification and remaining decisions: STAGE_3_REPORT.md.
+
+2026-10-08 bounded owner archive adaptation: selectable local hand/rake/steel
+grips, products-v3 tuning, schema3 selection migration and late needle-find glint.
+Preserve owned preset equipment. New machinery/construction is next version;
+this is not Stage3 acceptance or authorization to start Stage4.
 Costs, production metrics, meaningful upgrades, unlock pacing, save data and initial offline model.
-`GAMEPLAY_ECONOMY_PROPOSAL.md` is preserved for a separate design decision; it is
-not implemented. Start coding only after explicit owner authorization.
+Owner approved the first-slice design (archived as `STAGE_3_DESIGN_V1.md`) and authorized the first incremental playable
+slice in `STAGE_3.md`: 3 needles, cash-out/results, credits, first 2–3 meaningful
+manual-feed upgrades and versioned progression save. The next explicitly authorized
+small sub-pass adds manual product receivers and one purchased Baler (loose straw
+6 -> bundled 16 per lot), preserving the accepted line as a reference preset.
+Owner 2026-10-06 accepted acute clumps/physical needles and authorized the next
+bounded pass: purchased preset Short Conveyor 48 followed by Magnetic Separator
+72. Preserve manual loading, shared cargo and missable steel without the magnet;
+raw/sorted needle grades 3/4. See `STAGE_3_DESIGN.md`; other purchases remain deferred.
+Offline income is zero.
+Stop after tests/build/lint/physical smoke for owner review; no commit/push or
+acceptance tag/release. Stage 3 is not completed. Later Stage 3 passes and Stage 4
+must not begin automatically. The older economy proposal remains historical input.
 
 ## Stage 4 — Factory optimization
 Placement/layout where appropriate, buffers, bottlenecks, machine interactions and production diagnostics.

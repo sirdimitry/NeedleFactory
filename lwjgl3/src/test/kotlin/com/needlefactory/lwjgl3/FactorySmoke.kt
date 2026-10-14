@@ -17,7 +17,8 @@ object FactorySmoke {
     @JvmStatic fun main(args:Array<String>) {
         val pictures=mutableListOf<Pair<String,Pixmap>>()
         var haptics=0; var failure:Throwable?=null
-        val game=NeedleFactoryGame(BuildInfo("0.0.1","debug",true),PlatformFeedback { haptics++ },seed=42)
+        val game=NeedleFactoryGame(BuildInfo("0.0.1","debug",true),PlatformFeedback { haptics++ },seed=42,
+            factorySession=FactorySession(firstSeed=42)) // Retained Stage 2 regression harness.
         lateinit var screen:FactoryScreen
         var frames=0; var active=0; var wait=0; var batchFrames=0; var gestureTick=0; var pass=0
         var partialNeedleCaptured=false

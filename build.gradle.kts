@@ -6,5 +6,5 @@ plugins {
 
 allprojects {
     group = "com.needlefactory"
-    version = "0.0.1"
+    version = "0.3.0-stage3-playtest.1"
 }

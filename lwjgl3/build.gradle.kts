@@ -32,6 +32,52 @@ tasks.named<JavaExec>("run") {
 }
 
 // Optional real OpenGL verification. Not part of headless JVM tests or CI.
+tasks.register<JavaExec>("audioMenuSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.AudioMenuSmoke")
+    workingDir = rootProject.projectDir
+}
+
+tasks.register<JavaExec>("equipmentSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.EquipmentSmoke")
+    workingDir = rootProject.projectDir
+}
+tasks.register<JavaExec>("pitSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.PitSmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
+}
+
+tasks.register<JavaExec>("transportSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.TransportSmoke")
+    workingDir = rootProject.projectDir
+    systemProperty("needlefactory.transport.preview",providers.gradleProperty("transportPreview").getOrElse(""))
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
+}
+
+tasks.register<JavaExec>("grabSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.GrabSmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
+}
+
+tasks.register<JavaExec>("productSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.ProductSmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
+}
+
 tasks.register<JavaExec>("diagnosticSmoke") {
     dependsOn(tasks.testClasses)
     classpath = sourceSets["test"].runtimeClasspath
@@ -56,6 +102,14 @@ tasks.register<JavaExec>("factorySmoke") {
     dependsOn(tasks.testClasses)
     classpath = sourceSets["test"].runtimeClasspath
     mainClass.set("com.needlefactory.lwjgl3.FactorySmoke")
+    workingDir = rootProject.projectDir
+    if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
+}
+
+tasks.register<JavaExec>("workshopSmoke") {
+    dependsOn(tasks.testClasses)
+    classpath = sourceSets["test"].runtimeClasspath
+    mainClass.set("com.needlefactory.lwjgl3.WorkshopSmoke")
     workingDir = rootProject.projectDir
     if (System.getProperty("os.name").contains("Mac", ignoreCase = true)) jvmArgs("-XstartOnFirstThread")
 }
