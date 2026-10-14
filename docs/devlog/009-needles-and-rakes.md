@@ -1,0 +1,43 @@
+# 009 — Станки есть. Иголку видно. А где игра? / More Machines, a Visible Needle, and Still No Game
+
+## Русский
+
+*5 октября 2026 года, 20:05.*
+
+Устройств и точек взаимодействия стало больше, а вместе с ними — вопросов и несостыковок. Начать хотя бы с соломы: по отдельности пучки ещё выглядят терпимо, но стоит навалить их побольше, и на столе снова формируется настоящий волосатый шарик. Похоже, я изобрёл устойчивую форму жизни, которая переживает любую переделку графики.
+
+Станков тоже стало много. Всё крутится, что-то куда-то едет, магнит работает, упаковщик занят. Смотрю на это хозяйство и задаю неприятный вопрос: ну работает и работает, а в чём игра-то? Пока вместо ответа у меня целый завод. Очень убедительная декорация для вопроса.
+
+Отдельно пришлось повозиться с иголкой. Она была слишком тонкой и просто терялась. А сказать «сделай в цвет металла» — это примерно как пукнуть в воздух и ждать подробного технического задания. Металл бывает от белого до тёмно-серого, плюс ловит оттенки предметов вокруг. Пришлось разбираться не с названием цвета, а с тем, как иголка вообще выглядит. Теперь её наконец видно.
+
+Ещё сделал грабли, чтобы удобнее таскать пучки сена, а не возиться с каждой соломинкой отдельно. И тут физическое пятно касания подкинуло сюрприз: с граблями теперь можно читерствовать. Потянул — и они сами запихивают сено в бункер. Уже не надо возить пальцем по экрану как умалишённый. Хотел дать игроку инструмент, а дал ему способ увильнуть от работы.
+
+Записал это на видео. Материал в итоге собран на 100%, а иголки — 0/3. Получается, сено я научился убирать эффективнее, чем искать в нём иголки. Прекрасный момент вспомнить, какую игру я вообще собирался делать.
+
+### Фото и видео
+
+<figure class="screenshot landscape"><a href="../assets/screenshots/009-rake-and-straw.jpg" aria-label="Открыть скриншот"><img src="../assets/screenshots/009-rake-and-straw.jpg" width="2340" height="1080" loading="lazy" decoding="async" alt="Мастерская NeedleFactory: грабли в густом округлом пучке соломы у подачи, солома на конвейерах и несколько станков."></a><figcaption>Станков прибавилось. Волосатый шарик тоже вырос и теперь требует грабли, а не уговоры.</figcaption></figure>
+<figure class="screenshot landscape"><a href="../assets/screenshots/009-visible-needle.jpg" aria-label="Открыть скриншот"><img src="../assets/screenshots/009-visible-needle.jpg" width="2340" height="1080" loading="lazy" decoding="async" alt="Мастерская NeedleFactory с очищенным столом подачи и заметной светлой металлической иголкой на тёмном поле."></a><figcaption>Иголку наконец видно. Для игры про поиск иголки это подозрительно важное достижение.</figcaption></figure>
+<figure class="screenshot video portrait"><video controls playsinline preload="none" width="590" height="1280" poster="../assets/screenshots/009-video-poster.jpg" aria-label="Подача соломы граблями в NeedleFactory"><source src="../assets/videos/009-rake-demo.mp4" type="video/mp4"><p><a href="../assets/videos/009-rake-demo.mp4">Открыть видео</a></p></video><figcaption>Мой маленький чит с граблями: материал собран на 100%, иголки — 0/3. Сено убрал, а смысл игры ещё ищу. <a href="../assets/videos/009-rake-demo.mp4" download>Скачать видео</a></figcaption></figure>
+
+---
+
+## English
+
+*October 5, 2026, 20:05.*
+
+More devices and interaction points meant more questions and inconsistencies. Take the straw: individual bundles look tolerable, but pile up enough of them and a genuine hairball forms on the table again. Apparently, I have invented a resilient life form that survives every graphics revision.
+
+There are more machines too. Everything turns, something goes somewhere, the magnet works, and the packer keeps busy. I look at the whole setup and ask an uncomfortable question: fine, it works — but where is the game? So far, my answer is an entire factory. A very convincing set for that question.
+
+The needle needed attention as well. It was too thin and simply disappeared. Saying “make it metal-colored” is about as useful as farting into the wind and expecting a detailed specification. Metal ranges from white to dark gray, and picks up colors from nearby objects. I had to work out how the needle actually looks, rather than just naming a color. Now I can finally see it.
+
+I also made a rake so I could move bundles of hay instead of fussing over individual stems. Then the physical touch area gave me a surprise: the rake can now be used to cheat. Pull it, and it keeps shoving hay into the hopper by itself. No more swiping across the screen like a maniac. I wanted to give the player a tool; I gave them a way to dodge the work.
+
+I recorded it on video. Material collected ends up at 100%, while needles remain at 0/3. So I have learned to clear hay more efficiently than I can find needles in it. An excellent moment to remember what game I was trying to make.
+
+### Photo and video
+
+<figure class="screenshot landscape"><a href="../assets/screenshots/009-rake-and-straw.jpg" aria-label="Open screenshot"><img src="../assets/screenshots/009-rake-and-straw.jpg" width="2340" height="1080" loading="lazy" decoding="async" alt="NeedleFactory workshop: rake in a dense rounded straw bundle at the intake, straw on conveyors and several machines."></a><figcaption>More machines. The hairball has grown too, and now demands a rake rather than persuasion.</figcaption></figure>
+<figure class="screenshot landscape"><a href="../assets/screenshots/009-visible-needle.jpg" aria-label="Open screenshot"><img src="../assets/screenshots/009-visible-needle.jpg" width="2340" height="1080" loading="lazy" decoding="async" alt="NeedleFactory workshop with a cleared feed table and a visible light metallic needle against the dark field."></a><figcaption>The needle is finally visible. For a game about finding a needle, that seems suspiciously important.</figcaption></figure>
+<figure class="screenshot video portrait"><video controls playsinline preload="none" width="590" height="1280" poster="../assets/screenshots/009-video-poster.jpg" aria-label="Feeding straw with a rake in NeedleFactory"><source src="../assets/videos/009-rake-demo.mp4" type="video/mp4"><p><a href="../assets/videos/009-rake-demo.mp4">Open video</a></p></video><figcaption>My little rake exploit: material collected reaches 100%, needles remain at 0/3. The hay is cleared; I am still looking for the game. <a href="../assets/videos/009-rake-demo.mp4" download>Download video</a></figcaption></figure>

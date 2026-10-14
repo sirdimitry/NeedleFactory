@@ -17,13 +17,14 @@ Chronological notes on NeedleFactory — with a touch of self-deprecating humor 
 - [006 — Солома, пучки и горизонтальные сомнения / Straw, Bundles, and Landscape Doubts](006-straw-and-landscape.md)
 - [007 — Хотел солому. Получил волосатые шарики / I Wanted Straw. I Got Hairballs](007-hairy-straw.md)
 - [008 — Работает, падла! Теперь есть видео / It Works, Damn It! And There's Video](008-middle-ground.md)
+- [009 — Станки есть. Иголку видно. А где игра? / More Machines, a Visible Needle, and Still No Game](009-needles-and-rakes.md)
 - [2026-10-13 — Начало дневника / Journal kickoff](2026-10-13-kickoff.md)
 
 ## Страницы сайта / Website pages
 
-Записи 001–008 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
+Записи 001–009 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
 
-Entries 001–008 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
+Entries 001–009 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
 
 ## Шаблон / Template
 
