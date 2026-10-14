@@ -15,13 +15,14 @@ Chronological notes on NeedleFactory — with a touch of self-deprecating humor 
 - [003 — Портретная ориентация в альбомной рамке / Portrait in a landscape frame](003-orientation-experiment.md)
 - [005 — Позвал ИИ в художественный отдел / I Called AI into the Art Department](005-ai-art-direction.md)
 - [006 — Солома, пучки и горизонтальные сомнения / Straw, Bundles, and Landscape Doubts](006-straw-and-landscape.md)
+- [007 — Хотел солому. Получил волосатые шарики / I Wanted Straw. I Got Hairballs](007-hairy-straw.md)
 - [2026-10-13 — Начало дневника / Journal kickoff](2026-10-13-kickoff.md)
 
 ## Страницы сайта / Website pages
 
-Записи 001–006 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
+Записи 001–007 доступны на сайте как `.html`; Markdown-файлы остаются версиями для чтения в GitHub. При правке записи обновляйте обе версии. Оформление и переключение языка находятся в `../assets/devlog.css` и `../assets/devlog.js`.
 
-Entries 001–006 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
+Entries 001–007 have `.html` pages for the website and Markdown versions for reading on GitHub. Update both versions when editing an entry. Styling and language switching live in `../assets/devlog.css` and `../assets/devlog.js`.
 
 ## Шаблон / Template
 
